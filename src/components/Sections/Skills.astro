@@ -1,0 +1,58 @@
+---
+import Section from "@/components/Section.astro";
+
+import {skills} from "@cv"
+---
+
+<Section title="Aptitudes y habilidadaes">
+  {
+  skills.map(({name, keywords}) => {
+    return (
+            <article>
+              <header>
+              <h3>{name}</h3>
+              </header>
+              <footer>
+                <ul>
+                  {keywords.map(k => {
+                    return <li>{k}</li>
+                  })
+                }
+                </ul>
+              </footer>
+            </article>
+            )
+  })
+  }
+</Section>
+
+<style>
+  article {
+    margin: 2.5rem 0;
+  }
+  ul {
+    display: flex;
+    flex-direction: row;
+    gap:0.3rem;
+    flex-wrap: wrap;
+  }
+  li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: #ddd 1pt solid;
+    background: #eee7;
+    font-size: .7rem;
+    padding: 0.2rem;
+    width: 100px;
+    height: 30px;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+    color: #444;
+  }
+</style>
+

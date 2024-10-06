@@ -1,0 +1,173 @@
+---
+
+import {basics} from "@cv"
+import Section from "@/components/Section.astro"
+import Mail from "@/icons/Mail.astro"
+import Phone from "@/icons/Phone.astro"
+
+import GitHub from "@/icons/GitHub.astro"
+import LinkedIn from "@/icons/LinkedIn.astro"
+import WorldMap from "@/icons/WorldMap.astro"
+
+const { name, label, image, location, phone, profiles, email, description } = basics
+const {city, region} = location
+
+const SOCIAL_ICONS: Record<string, any> = {
+  GitHub,
+  LinkedIn
+}
+
+const printInfo = ["LinkedIn"]
+
+---
+
+<Section>
+  <div class="container">
+    <div>
+      <h1>{name}</h1>
+      <h2>{label}</h2>
+      <h3>{description}</h3>
+      <span>
+        <WorldMap />
+        {city}, {region}
+      </span>
+      <footer>
+        {
+          email && (
+            <a href={`mailto:${email}`} title={`Enviar correo electrónico a ${name}, ${email}`} target="_blank" rel="noopener noreferrer">
+                <span><Mail /></span>
+                <span class="print">{email}</span>
+            </a>
+          )
+        }
+        {
+          phone && (
+            <a href={`tel:${phone}`} title={`Llamar por teléfono a ${name}, ${phone}`} target="_blank" rel="noopener noreferrer">
+                <span><Phone /></span>
+                <span class="print">{phone}</span>
+            </a>
+          )
+        }
+        {
+          profiles.map(({network, url, shorturl}) => {
+            const Icon = SOCIAL_ICONS[network]
+
+            return <a href={url} title={`Visitar el perfil de ${name} en ${network}`}>
+                <span class={printInfo.includes(network) ? "" : "no-print"}><Icon /></span>
+                {printInfo.includes(network) && <span class="print">{shorturl}</span>}
+            </a>
+          })
+        }
+      </footer>
+    </div>
+    <figure>
+      <img src={image} alt={name} />
+    </figure>
+  </div>
+</Section>
+
+<style>
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1em;
+  }
+
+  h1 {
+    font-size: 2rem;
+    margin: 0.6rem 0;
+  }
+
+  h2 {
+    color: #333;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-wrap: balance;
+    margin: 0;
+  }
+
+  h3 {
+    color: #444;
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  img {
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    width: 130px;
+    margin-top: 2rem;
+  }
+
+  span {
+    color: #666;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 0.85rem;
+    letter-spacing: -0.05rem;
+    font-style: italic;
+    padding: .5rem 0;
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    padding-right: 32px;
+  }
+
+  footer {
+    display: flex;
+    gap: 10px;
+  }
+
+  footer a {
+    color: #444;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: #eee 1pt solid;
+    padding: 2px;
+    width: 32px;
+    height: 32px;
+    transition: all 0.3s ease;
+  }
+
+  footer a:hover {
+    background: #eee;
+    color: #111;
+  }
+
+  .print {
+    display: none;
+  }
+
+  @media print {
+    .print {
+      display: block;
+    }
+
+    footer a {
+      border: none;
+      width: auto;
+      height: auto;
+      padding: 0;
+      text-wrap: nowrap;
+      gap: 0.7rem;
+      margin-right: 1.2rem;
+    }
+
+    footer {
+      flex-direction: row;
+      gap: 0rem;
+    }
+  }
+
+  @media print {
+    .no-print {
+      display: none;
+    }
+  }
+</style>

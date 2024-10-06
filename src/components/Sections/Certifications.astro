@@ -1,0 +1,26 @@
+---
+import Section from "@/components/Section.astro";
+
+import {certificates} from "@cv"
+---
+
+<Section title="Certificaciones">
+  <ul>
+  {
+    certificates.map(({name}) =>{
+      return (
+        <li>{name}</li>
+      )
+    })
+  </ul>
+  }
+</Section>
+
+<style>
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+</style>
