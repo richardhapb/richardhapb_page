@@ -9,7 +9,7 @@ import GitHub from "@/icons/GitHub.astro"
 import LinkedIn from "@/icons/LinkedIn.astro"
 import WorldMap from "@/icons/WorldMap.astro"
 
-const { name, label, image, location, phone, profiles, email, description } = basics
+const { name, label, image, location, phone, profiles, email, description, url } = basics
 const {city, region} = location
 
 const SOCIAL_ICONS: Record<string, any> = {
@@ -66,9 +66,7 @@ const printInfo = ["LinkedIn"]
 <style>
   .container {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 1em;
+    gap: 1rem;
   }
 
   h1 {
@@ -112,12 +110,12 @@ const printInfo = ["LinkedIn"]
     display: flex;
     flex-direction: column;
     gap: .5rem;
-    padding-right: 32px;
   }
 
   footer {
     display: flex;
     gap: 10px;
+    flex-wrap: wrap;
   }
 
   footer a {

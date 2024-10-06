@@ -18,8 +18,10 @@ import {work} from "@cv"
           </div>
           <time>{years}</time>
         </header>
-      <p>{summary}</p>
-      <footer>
+        <main>
+          {summary}
+        </main>
+        <footer>
         <ul>
           {
           highlights.map(h => {
@@ -27,7 +29,7 @@ import {work} from "@cv"
           } )
           }
         </ul>
-    </footer>
+      </footer>
     </article>)
     }) 
   }
@@ -36,12 +38,17 @@ import {work} from "@cv"
 
 
 <style>
-  .main {
-    display: inline-block;
-  }
+  
+  @media print {
 
-  article {
-    page-break-inside: auto;
+    .main {
+    }
+    article {
+      page-break-inside: auto;
+    }
+    footer {
+      page-break-before: auto;
+    }
   }
 
   h2 {
@@ -59,8 +66,8 @@ import {work} from "@cv"
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    list-style: disc inside;
-    font-size: 0.9rem;
+    list-style: disc;
+    font-size: 1rem;
     margin: 1.8rem 0;
   }
 
@@ -80,5 +87,6 @@ import {work} from "@cv"
     font-weight: 500;
     margin-bottom: 1rem;
   }
+
 </style>
 
