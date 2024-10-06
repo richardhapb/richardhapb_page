@@ -7,6 +7,7 @@
     "email": "richard.penab@gmail.com",
     "phone": "(569) 3444 7286",
     "url": "https://richardhapb.com",
+    "qrurl": "https://richardhapb.s3.us-east-2.amazonaws.com/resources/qr.png",
     "summary": "Soy un ingeniero impulsado por la innovación y el aprendizaje continuo. Tengo una sólida capacidad para enfrentar desafíos complejos con pensamiento crítico, implementando mejoras constantes. He liderado equipos diversos y gestionado proyectos de alto impacto, optimizando la eficiencia y productividad mediante la automatización y toma de decisiones basadas en las ciencias de la ingeniería. Disfruto trabajar en entornos que valoran la diferencia y el pensamiento fuera de lo convencional, tomando riesgos controlados para lograr una ejecución excepcional.",
     "location": {
       "address": "José Ureta 180",
@@ -32,7 +33,7 @@
   },
   "work": [
     {
-      "name": "Salinas y Fabres S.A.",
+      "name": "Salinas y Fabres",
       "position": "Jefe de Servicio",
       "url": "https://salfa.cl",
       "startDate": "2023",
@@ -249,7 +250,7 @@
   ],
   "hardskills": [
     "Habilidades analíticas",
-    "Inteligencia Articial",
+    "Inteligencia Artificial",
     "Trabajo en la nube",
     "Office 365 avanzado",
     "Inglés Upper Intermediate",

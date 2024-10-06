@@ -50,7 +50,10 @@ import {hardskills, softskills, certificates} from "@cv"
 <style>
   .main {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10%;
     gap: 5rem;
   }
 
@@ -69,8 +72,40 @@ import {hardskills, softskills, certificates} from "@cv"
   }
 
   .list {
-    width: calc(100% / 3);
+    min-width: 80%;
   }
+
+
+  @media screen and (min-width: 800px) {
+    .main {
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-items: normal;
+      justify-content: normal;
+      margin-left: 0;
+    }
+
+    .list {
+      min-width: auto;
+      width: calc(100% / 3);
+    }
+  }
+
+  @media print {
+    .main {
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-items: normal;
+      justify-content: normal;
+      margin-left: 0;
+    }
+
+    .list {
+      min-width: auto;
+      width: calc(100% / 3);
+    }
+  }
+
 
 </style>
 

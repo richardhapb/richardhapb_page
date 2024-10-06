@@ -46,8 +46,19 @@ import {skills} from "@cv"
     background: #eee7;
     font-size: .8rem;
     padding: 0.2rem;
-    width: calc(100% / 4 - 4px);
     height: 30px;
+  }
+
+  @media screen and (min-width: 800px) {
+    li {
+      width: calc(100% / 4 - 4px);
+    }
+  }
+
+  @media print {
+    li {
+      width: calc(100% / 4 - 4px);
+    }
   }
 
   h3 {
