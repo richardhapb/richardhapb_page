@@ -1,6 +1,4 @@
 ---
-
-import {basics} from "@cv"
 import Section from "@/components/Section.astro"
 import Mail from "@/icons/Mail.astro"
 import Phone from "@/icons/Phone.astro"
@@ -8,6 +6,11 @@ import Phone from "@/icons/Phone.astro"
 import GitHub from "@/icons/GitHub.astro"
 import LinkedIn from "@/icons/LinkedIn.astro"
 import WorldMap from "@/icons/WorldMap.astro"
+
+
+import {fetchCV} from "@/utils/apicv"
+
+const {basics} = await fetchCV()
 
 const { name, label, image, location, phone, profiles, email, description, qrurl, url } = basics
 const {city, region} = location

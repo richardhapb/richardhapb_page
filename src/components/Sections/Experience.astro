@@ -1,7 +1,10 @@
 ---
 import Section from "@/components/Section.astro";
 
-import {work} from "@cv"
+import {fetchCV} from "@/utils/apicv"
+
+const {work} = await fetchCV()
+
 ---
 
 <Section title="Experiencia">

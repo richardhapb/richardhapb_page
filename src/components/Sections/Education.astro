@@ -1,13 +1,14 @@
 ---
 import Section from "@/components/Section.astro";
 
-import {education} from "@cv"
+import {fetchCV} from "@/utils/apicv"
+
+const {education} = await fetchCV()
 ---
 
 <Section title="Educación">
   {
-    education.map(({institution, title, startDate, endDate}) => {
-      const years = startDate + (endDate && " - " + endDate)
+    education.map(({institution, title}) => {
       return (
       <article>
         <header>

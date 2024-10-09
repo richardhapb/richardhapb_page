@@ -1,6 +1,8 @@
 ---
 
-import {basics} from "@cv"
+import { fetchCV } from '@/utils/apicv';
+
+const {basics} = await fetchCV()
 
 const {name, description} = basics
 
@@ -10,7 +12,6 @@ interface Props {
 
 const { title } = Astro.props;
 ---
-
 <!doctype html>
 <html lang="es">
 	<head>

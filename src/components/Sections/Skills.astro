@@ -1,7 +1,10 @@
 ---
 import Section from "@/components/Section.astro";
 
-import {skills} from "@cv"
+import {fetchCV} from "@/utils/apicv"
+
+const {skills} = await fetchCV()
+
 ---
 
 <Section title="Aptitudes y habilidadaes">
