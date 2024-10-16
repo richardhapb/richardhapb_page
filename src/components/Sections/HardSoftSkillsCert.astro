@@ -2,7 +2,7 @@
 import Section from "@/components/Section.astro";
 
 
-import {fetchCV} from "@/utils/apicv"
+import {fetchCV} from "@/api/cvApi"
 
 const {hardskills, softskills, certificates} = await fetchCV()
 

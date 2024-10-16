@@ -1,0 +1,22 @@
+---
+
+import BlogContent from '@/components/BlogContent';
+import Layout from '@/layouts/Layout.astro';
+
+---
+<Layout title="Blog">
+    <BlogContent client:load />
+</Layout>
+
+<style>
+    main {
+        padding: 1em;
+        margin: auto;
+        width: 100%;
+    }
+
+    @media print {
+        main {
+            padding: 3em;
+        }
+    }

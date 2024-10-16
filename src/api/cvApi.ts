@@ -33,7 +33,7 @@ let dataCV: CV = {
   hardskills: []
 };
 
-export async function fetchCV() {
+export async function fetchCV(): Promise<CV> {
   if (!dataCV.basics || Object.keys(dataCV.basics).length === 0) {
     const response = await fetch('https://richardhapb.s3.us-east-2.amazonaws.com/resources/cv.json');
     const data = await response.json();

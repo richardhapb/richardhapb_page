@@ -8,7 +8,7 @@ import Hero from '@/components/Sections/Hero.astro';
 import Skills from '@/components/Sections/Skills.astro';
 import HardSoftSkillsCert from '@/components/Sections/HardSoftSkillsCert.astro';
 
-import { fetchCV } from '@/utils/apicv';
+import { fetchCV } from '@/api/cvApi';
 
 const {basics} = await fetchCV()
 
