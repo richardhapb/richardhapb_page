@@ -1,43 +1,14 @@
 // apicv.ts
 
 import type { CV } from "@/types/CV"; 
+import cv from "@cv";
 
-let dataCV: CV = {
-  basics: {name: "",
-    label: "",
-    description: "",
-    image: "",
-    email: "",
-    phone: "",
-    url: "",
-    qrurl: "",
-    summary: "",
-    location: {
-      address: "",
-      postalCode: "",
-      city: "",
-      countryCode: "",
-      region: ""},
-    profiles: []
-    },
-  work: [],
-  education: [],
-  certificates: [],
-  publications: [],
-  skills: [],
-  languages: [],
-  interests: [],
-  references: [],
-  projects: [],
-  softskills: [],
-  hardskills: []
-};
+let dataCV: CV = cv;
 
+// Se mantiene función para compatibilidad con api de AWS 'https://richardhapb.s3.us-east-2.amazonaws.com/resources/cv.json'
 export async function fetchCV(): Promise<CV> {
-  if (!dataCV.basics || Object.keys(dataCV.basics).length === 0 || dataCV.basics.name === "") {
-    const response = await fetch('https://richardhapb.s3.us-east-2.amazonaws.com/resources/cv.json');
-    const data = await response.json();
-    dataCV = data
+  if (!dataCV.basics || Object.keys(dataCV.basics).length === 0) {
+    const dataCV = cv;
   }
-  return dataCV;
+  return dataCV
 }
