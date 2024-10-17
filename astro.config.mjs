@@ -1,9 +1,12 @@
-import { defineConfig } from 'astro/config';
-import react from '@astrojs/react';
-import dotenv from 'dotenv';
-
-dotenv.config();
+import { defineConfig, envField } from 'astro/config';
 
 export default defineConfig({
-  integrations: [react()],
+  output: 'server',
+  env: {
+    schema: {
+      API_URL: {
+         envField: envField.string({context: 'server', access: 'secret'})
+      },
+    }
+  }
 });

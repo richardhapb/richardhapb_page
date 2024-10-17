@@ -1,11 +1,19 @@
 ---
-
-import BlogContent from '@/components/BlogContent';
 import Layout from '@/layouts/Layout.astro';
+import { getBlogs } from '@/api/blogApi'
+
+const blogs = await getBlogs()
 
 ---
 <Layout title="Blog">
-    <BlogContent client:load />
+    <main>
+        <h1>Blog</h1>
+        {
+            blogs.map((blog: { title: unknown; }) => {
+                return <div>{blog.title}</div>
+            })
+        }
+    </main>
 </Layout>
 
 <style>

@@ -34,7 +34,7 @@ let dataCV: CV = {
 };
 
 export async function fetchCV(): Promise<CV> {
-  if (!dataCV.basics || Object.keys(dataCV.basics).length === 0) {
+  if (!dataCV.basics || Object.keys(dataCV.basics).length === 0 || dataCV.basics.name === "") {
     const response = await fetch('https://richardhapb.s3.us-east-2.amazonaws.com/resources/cv.json');
     const data = await response.json();
     dataCV = data
