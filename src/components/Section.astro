@@ -12,13 +12,22 @@ const { title } = Astro.props
     margin: 0 auto 95px;
   }
 
+  @media print {
+    section {
+      page-break-before: auto;
+      page-break-inside: auto;
+			margin: 0 auto 45px;
+    }
+
+    h1 {
+      page-break-before: auto;
+      page-break-after: avoid;
+      page-break-inside: auto;
+    }
+  }
+
   h2 {
     text-decoration: underline;
     text-underline-offset: .4rem;
-  }
-  @media print {
-    section h1 {
-      page-break-after: avoid;
-    }
   }
 </style>
