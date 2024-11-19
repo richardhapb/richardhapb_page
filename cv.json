@@ -227,7 +227,7 @@
       "name": "Gestión del tráfico Antofagasta",
       "startDate": "2024-08-20",
       "endDate": "2024-11-19",
-      "description": "Proyecto end-to-end Waze Cities program API, ETL y Machine Learning con entrenamiento automático.",
+      "description": "Proyecto end-to-end Waze Cities program API, ETL y Machine Learning con aprendizaje automático.",
       "highlights": [
         "Gestión del tráfico"
       ],
