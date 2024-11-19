@@ -1,8 +1,109 @@
 ---
 import Section from "@/components/Section.astro";
+
+import { fetchCV } from "@/api/cvApi";
+
+const {projects} = await fetchCV();
 ---
 
 <Section title="Proyectos">
-  <p>Proyecto 1</p>
+    {
+    projects.map(p => {
+    return (
+    <a href={p.url} title=`Enlace a ${p.name}`>
+        <div class="card">
+            <h3>{p.name}</h3>
+            <div class="content">
+                <img class="no-print" src={p.image} title={p.name} alt="Project Image" />
+                <img class="print" src={p.qrImage} title={p.name} alt="Project Image" />
+                <p>{p.description}</p>
+            </div>
+            <ul>
+                {p.technologies.map(t => {
+                return <li>{t}</li>
+                })
+            }
+            </ul>
+        </div>
+        </a>
+        )
+    })
+    }
 </Section>
+
+<style>
+    .card {
+        display: flex;
+        flex-direction: column;
+        border: #aaa 1px solid;
+        border-radius: 10px;
+        padding: .5rem;
+        gap: 1rem;
+    }
+
+    .card:hover {
+        background: #eee;
+        border: #333 1px solid;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    a {
+        display: block;
+        max-width: 320px;
+        color: black;
+        text-decoration: none;
+        font-size: 0.9rem;
+    }
+
+    img {
+        display:block;
+        width: auto;
+        height: 100px;
+        margin: 0 auto;
+    }
+
+    h3 {
+        margin: 0;
+    }
+
+    p {
+        color: #777;
+        margin: 0;
+        padding: 0;
+    }
+
+    h3 {
+        text-align: center;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 0.8rem;
+    }
+
+    li {
+        color: #000;
+    }
+
+    @media print {
+        .card {
+            page-break-inside:avoid;
+        }
+
+        p, li {
+            font-size: 0.9rem;
+        }
+    }
+</style>
 

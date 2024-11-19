@@ -37,9 +37,21 @@ const { title } = Astro.props;
 		font: Menlo, Monaco, 'Lucida Console', 'Courier New', Courier, monospace;
 		background: #fff;
 		letter-spacing: -0.025em;
-	}
+    }
+
+    .print {
+        display: none !important;
+    }
 
 	@media print {
+        .print {
+            display: block !important;
+        }
+
+        .no-print {
+            display: none !important;
+        }
+
 		section {
 			page-break-before: auto;
 		}

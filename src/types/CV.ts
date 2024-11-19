@@ -105,6 +105,9 @@ interface project {
   startDate: string;
   endDate: string;
   description: string;
+  image: string;
+  qrImage: string;
   highlights: string[];
+  technologies: string[];
   url: string;
 }

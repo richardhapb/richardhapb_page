@@ -1,8 +1,8 @@
 {
   "basics": {
     "name": "Richard Peña Bonifaz",
-    "label": "Ingeniero de Ejecución Industrial",
-    "description": "Apasionado por hacer las cosas, solucionar problemas y afrontar desafíos que potencien mi desarrollo personal y profesional. Me gusta implementar tecnología en los procesos.",
+    "label": "Data Engineer",
+    "description": "Enfocado por hacer las cosas, solucionar problemas y afrontar desafíos. Trabajo fuertemente con diferentes herramientas para dar solución a problemas reales. Me apasiona mi trabajo.", 
     "image": "https://richardhapb.s3.us-east-2.amazonaws.com/personal/profile.jpeg",
     "email": "richard.penab@gmail.com",
     "phone": "(569) 3444 7286",
@@ -115,24 +115,6 @@
       "date": "2023",
       "issuer": "Bereau Veritas",
       "url": ""
-    },
-    {
-      "name": "Operador de caldera baja, mediana y alta presión",
-      "date": "2017",
-      "issuer": "Minsal",
-      "url": ""
-    },
-    {
-      "name": "Operador de Autoclave",
-      "date": "2017",
-      "issuer": "Minsal",
-      "url": ""
-    },
-    {
-      "name": "Licencia de conducir clase B y D",
-      "date": "2014",
-      "issuer": "Municipalidad de Antofagasta",
-      "url": ""
     }
   ],
   "publications": [
@@ -146,45 +128,55 @@
   ],
   "skills": [
     {
-      "name": "Ingeniería de procesos",
+      "name": "Data Engineer",
       "level": "Intermedio",
       "keywords": [
-        "Investigación de operaciones",
-        "Automatización de procesos",
-        "Gestión de operaciones",
-        "Diseño de procesos",
-        "Gestión de proyectos",
-        "Metodología Lean"
+        "ETL",
+        "Apache Spark",
+        "AWS Lambda",
+        "AWS Glue",
+        "AirFlow",
+        "SQL",
+        "Python",
+        "DynamoDB",
+        "MongoDB",
+        "Pipelines",
+        "Databricks",
+        "Data Warehouse",
+        "Data Lake",
+        "Docker",
+        "Kubernetes"
       ]
     },
     {
-      "name": "Ciencia de datos",
+      "name": "Data Science",
       "level": "Intermedio",
       "keywords": [
         "Python",
         "SQL",
-        "AWS",
+        "Pandas",
+        "Numpy",
+        "Scikit-Learn",
+        "TensorFlow",
         "Machine Learning",
         "Deep Learning",
-        "Estadísticas"
+        "MLFlow"
       ]
     },
     {
-      "name": "Desarrollo Web",
-      "level": "Intermedio",
-      "keywords": [
-        "HTML",
-        "CSS",
-        "ASP.NET Core",
-        "C#",
-        "JavaScript",
-        "ReactJS",
-        "Django",
-        "Astro",
-        "TailwindCSS",
-        "NodeJS",
-        "PHP"
-      ]
+        "name": "Inteligencia de negocios / Web",
+        "level": "Avanzado",
+        "keywords": [
+            "PowerBI",
+            "Plotly",
+            "Dash",
+            "Excel avanzado",
+            "Power Automate",
+            "CSS",
+            "JavaScript",
+            "Django",
+            "NodeJS"
+        ]
     }
   ],
   "languages": [
@@ -231,14 +223,17 @@
   ],
   "projects": [
     {
-      "name": "Project",
-      "startDate": "2019-01-01",
-      "endDate": "2021-01-01",
-      "description": "Description...",
+      "name": "Gestión del tráfico Antofagasta",
+      "startDate": "2024-08-20",
+      "endDate": "2024-11-19",
+      "description": "Proyecto end-to-end Waze Cities program API, ETL y Machine Learning con entrenamiento automático.",
       "highlights": [
-        "Won award at AIHacks 2016"
+        "Gestión del tráfico"
       ],
-      "url": "https://project.com/"
+      "image": "https://richardhapb.s3.us-east-2.amazonaws.com/project/cover/project_antof_traffic.png",
+      "qrImage": "https://richardhapb.s3.us-east-2.amazonaws.com/project/qr/qr_antof_traffic.png",
+      "technologies": ["Python", "PostgreSQL", "Dash", "ETL", "PyPlot", "Machine Learning", "MLFlow", "AWS Lambda", "Linux"],
+      "url": "https://traficoantofagasta.com"
     }
   ],
   "softskills": [
@@ -252,11 +247,11 @@
   ],
   "hardskills": [
     "Habilidades analíticas",
-    "Inteligencia Artificial",
-    "Trabajo en la nube",
+    "Git / GitHub",
+    "Trabajo en la nube / Cloud",
     "Office 365 avanzado",
     "Inglés Upper Intermediate",
     "Gestión de base de datos",
-    "Análisis de negocio"
+    "Diagramación de estructuras"
   ]
 }
