@@ -25,4 +25,4 @@ pnpm-debug.log*
 .idea/
 
 .vscode
-.vscode
+cv.json
