@@ -7,31 +7,39 @@ const {projects} = await fetchCV();
 ---
 
 <Section title="Proyectos">
+    <div id="projects">
     {
     projects.map(p => {
     return (
-    <a href={p.url} title=`Enlace a ${p.name}`>
-        <div class="card">
-            <h3>{p.name}</h3>
-            <div class="content">
-                <img class="no-print" src={p.image} title={p.name} alt="Project Image" />
-                <img class="print" src={p.qrImage} title={p.name} alt="Project Image" />
-                <p>{p.description}</p>
-            </div>
-            <ul>
-                {p.technologies.map(t => {
-                return <li>{t}</li>
-                })
-            }
-            </ul>
+        <a href={p.url} title=`Enlace a ${p.name}`>
+            <div class="card">
+                <h3>{p.name}</h3>
+                <div class="content">
+                    <img class="no-print" src={p.image} title={p.name} alt="Project Image" />
+                    <img class="print" src={p.qrImage} title={p.name} alt="Project Image" />
+                    <p>{p.description}</p>
+                </div>
+                <ul>
+                    {p.technologies.map(t => {
+                    return <li>{t}</li>
+                    })
+                }
+                </ul>
         </div>
         </a>
         )
     })
     }
+    </div>
 </Section>
 
 <style>
+	#projects {
+		display: flex;
+		flex-direction: row;
+        justify-content: space-between;
+
+	}
     .card {
         display: flex;
         flex-direction: column;

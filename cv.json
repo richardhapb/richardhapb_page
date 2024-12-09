@@ -235,6 +235,20 @@
       "qrImage": "https://richardhapb.s3.us-east-2.amazonaws.com/project/qr/qr_antof_traffic.png",
       "technologies": ["Python", "PostgreSQL", "Dash", "ETL", "PyPlot", "Machine Learning", "MLFlow", "AWS Lambda", "Linux"],
       "url": "https://traficoantofagasta.com"
+    },
+
+    {
+      "name": "Monitoreo de solicitudes HTTP",
+      "startDate": "2024-12-03",
+      "endDate": "2024-12-05",
+      "description": "Gestión de solicitudes desde IPs y evaluación de solicitudes maliciosas según reportes en BD.",
+      "highlights": [
+        "Análitica de solicitudes IPs"
+      ],
+      "image": "https://richardhapb.s3.us-east-2.amazonaws.com/project/cover/ip-analytics.png",
+      "qrImage": "https://richardhapb.s3.us-east-2.amazonaws.com/project/qr/qr_ip_analytics.png",
+      "technologies": ["Fluent Bit", "Kafka", "Zookeeper", "ETL", "Docker", "React", "Flask", "PostgreSQL", "Typescript/Python"],
+      "url": "https://github.com/richardhapb/ip-analytics"
     }
   ],
   "softskills": [
