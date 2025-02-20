@@ -1,272 +1,310 @@
 {
-  "basics": {
-    "name": "Richard Peña Bonifaz",
-    "label": "Data Engineer",
-    "description": "Enfocado por hacer las cosas, solucionar problemas y afrontar desafíos. Trabajo fuertemente con diferentes herramientas para dar solución a problemas reales. Me apasiona mi trabajo.", 
-    "image": "https://richardhapb.s3.us-east-2.amazonaws.com/personal/profile.jpeg",
-    "email": "richard.penab@gmail.com",
-    "phone": "(569) 3444 7286",
-    "url": "https://richardhapb.com",
-    "qrurl": "https://richardhapb.s3.us-east-2.amazonaws.com/resources/qr.png",
-    "summary": "Soy un ingeniero impulsado por la innovación y el aprendizaje continuo. Tengo una sólida capacidad para enfrentar desafíos complejos con pensamiento crítico, implementando mejoras constantes. He liderado equipos diversos y gestionado proyectos de alto impacto, optimizando la eficiencia y productividad mediante la automatización y toma de decisiones basadas en las ciencias de la ingeniería. Disfruto trabajar en entornos que valoran la diferencia y el pensamiento fuera de lo convencional, tomando riesgos controlados para lograr una ejecución excepcional.",
-    "location": {
-      "address": "José Ureta 180",
-      "postalCode": "79700000",
-      "city": "Región Metropolitana de Santiago",
-      "countryCode": "CL",
-      "region": "Chile"
-    },
-    "profiles": [
-      {
-        "network": "LinkedIn",
-        "username": "richardhapb",
-        "url": "https://www.linkedin.com/in/richard-hapb",
-        "shorturl": "linkedin.com/in/richard-hapb"
-      },
-      {
-        "network": "GitHub",
-        "username": "richardhapb",
-        "url": "https://github.com/richardhapb",
-        "shorturl": "github.com/richardhapb"
-      }
-    ]
-  },
-  "work": [
-    {
-      "name": "Salinas y Fabres",
-      "position": "Jefe de Servicio",
-      "url": "https://salfa.cl",
-      "startDate": "2023",
-      "endDate": "2024",
-      "summary": "Gestioné el cumplimiento de objetivos de rentabilidad, satisfacción del cliente y productividad en dos talleres de servicio automotriz con la mayor demanda a nivel nacional. Me enfoqué en mantener la operación fluida y eficiente, planificando, estandarizando flujos de trabajo y garantizando la entrega puntual de servicios, lo que aumentó la eficiencia y satisfacción del cliente.",
-      "highlights": [
-        "Formé equipo para la operación de dos talleres de servicio automotriz, garantizando el cumplimiento de los objetivos de rentabilidad. Equipo que logró generar cohesión.",
-        "Implementé planificaciones y estandarización de flujos de trabajo, evitando retrasos en las órdenes de trabajo. Lo que permitió reducir 20% en dos meses las orden de trabajo en proceso.",
-        "Mejoré la satisfacción del cliente mediante la optimización de los tiempos de respuesta y la comunicación fluida, lo que aumenta 50% NPS.",
-        "Potencié el proceso de desarrolo funcionario para los técnicos y personal administrativo, lo que impactó en una mayor motivación en el trabajo."
-      ]
-    },
-    {
-      "name": "Kal Tire",
-      "position": "Jefe de Operaciones",
-      "url": "https://kaltire.com",
-      "startDate": "2014",
-      "endDate": "2023",
-      "summary": "Pasé por varios roles como parte de mi desarrollo, desde técnico hasta Jefe de Operaciones. Lideré el proceso productivo y administrativo de la planta de Reparación y Renovado OTR, mejorando la productividad, automatizando tareas, y adoptando tecnología para el desarrollo del proceso. Además, desarrollé un sistema digital para reportes en tiempo real, implementé medidas de ahorro energético, y gestioné presupuestos anuales.",
-      "highlights": [
-        "Aumenté con el equipo la productividad y automatización en procesos clave de la planta. Un 70% en tres años.",
-        "Desarrollé un sistema digital de control operacional con reportes en tiempo real usando Forms y Dashboards. Lo que redujo el tiempo de reacción y acceso a la información en un 100%",
-        "Implementé controles energéticos que redujeron el consumo en un 40%.",
-        "Lideré y formé un equipo de 30 miembros, mejorando el clima laboral y retención del talento. 12 ascensos, dos de ellos a labores de supervisión.",
-        "Gestioné los presupuestos anuales, optimizando ingresos y gastos. Aumento en utilidad 8%.",
-        "Implementé procesos de evaluación de desempeño para el desarrollo del equipo. De 0 a 1 evaluación anual.",
-        "Implementé sistemas de reportabilidad para inspecciones en terreno, reduciendo el tiempo de emisión de cotizaciones en 3 días y disminuyendo las horas hombre necesarias.",
-        "Generé propuestas técnicas y económicas que lograron contratos que representaron más del 20% de la producción de la planta."
-      ]
-    }
-  ],
-  "education": [
-    {
-      "institution": "Universidad Arturo Prat",
-      "title": "Ingeniería Civil Industrial",
-      "url": "https://unap.cl",
-      "area": "Ingeniería",
-      "studyType": "Licenciatura",
-      "startDate": "2023",
-      "endDate": "2024"
-    },
-    {
-      "institution": "Universidad Arturo Prat",
-      "title": "Ingeniería de Ejecución Industrial",
-      "url": "https://unap.cl",
-      "area": "Ingeniería",
-      "studyType": "Pregrado",
-      "startDate": "2020",
-      "endDate": "2023"
-    },
-    {
-      "institution": "Universidad Arturo Prat",
-      "title": "Técnico Nivel Superior en Operaciones Mina",
-      "url": "https://unap.cl",
-      "area": "Minería",
-      "studyType": "Técnico",
-      "startDate": "2016",
-      "endDate": "2018"
-    },
-    {
-      "institution": "Liceo Industrial Eulogio Gordo Moneo",
-      "title": "Técnico Nivel Medio en Mecánica Automotríz",
-      "url": "https://www.liceoindustrialegm.cl",
-      "area": "Técnico",
-      "studyType": "Enseñanda Media",
-      "startDate": "2008",
-      "endDate": "2012"
-    }
-  ],
-  "certificates": [
-    {
-      "name": "Auditor Interno ISO 9001:2015, 14001:2015 y 45001:2018",
-      "date": "2022",
-      "issuer": "Bereau Veritas",
-      "url": ""
-    },
-    {
-      "name": "Auditor Interno ISO 50001:2018",
-      "date": "2023",
-      "issuer": "Bereau Veritas",
-      "url": ""
-    }
-  ],
-  "publications": [
-    {
-      "name": "Publication",
-      "publisher": "Company",
-      "releaseDate": "2014-10-01",
-      "url": "https://publication.com",
-      "summary": "Description…"
-    }
-  ],
-  "skills": [
-    {
-      "name": "Data Engineer",
-      "level": "Intermedio",
-      "keywords": [
-        "ETL",
-        "Apache Spark",
-        "AWS Lambda",
-        "AWS Glue",
-        "AirFlow",
-        "SQL",
-        "Python",
-        "DynamoDB",
-        "MongoDB",
-        "Pipelines",
-        "Big Data",
-        "Databricks",
-        "Data Warehouse",
-        "Data Lake",
-        "Docker",
-        "Kubernetes"
-      ]
-    },
-    {
-      "name": "Data Science",
-      "level": "Intermedio",
-      "keywords": [
-        "Python",
-        "SQL",
-        "Pandas",
-        "Numpy",
-        "Scikit-Learn",
-        "TensorFlow",
-        "Machine Learning",
-        "Deep Learning",
-        "MLFlow"
-      ]
-    },
-    {
-        "name": "Inteligencia de negocios / Web",
-        "level": "Avanzado",
-        "keywords": [
-            "PowerBI",
-            "Plotly",
-            "Dash",
-            "Excel avanzado",
-            "Power Automate",
-            "CSS",
-            "JavaScript",
-            "Django",
-            "NodeJS"
+    "basics": {
+        "name": "Richard Peña Bonifaz",
+        "label": "Software Enginner",
+        "description": "Me apasiona profundamente mi trabajo, paso la mayor parte de mi tiempo aprendiendo cosas nuevas, me gusta resolver problemas y mi enfoque está en seguir mejorando como profiesional y como persona.",
+        "image": "https://richardhapb.s3.us-east-2.amazonaws.com/personal/profile.jpeg",
+        "email": "richard.penab@gmail.com",
+        "phone": "(569) 3444 7286",
+        "url": "https://richardhapb.com",
+        "qrurl": "https://richardhapb.s3.us-east-2.amazonaws.com/resources/qr.png",
+        "summary": "Soy desarrollador avanzado en Python, con el objetivo de serlo también en Rust, trabajo en proyectos personales relacionados con ML y DL, también en herramientas CLI. Mi enfoque está en siempre aprender lo necesario para resolver problemas, por eso constantemente me encuentro buscando problemas interesantes en lo que adentrarme y seguir aprendiendo. Mis principios se basan en la honestidad y la libertad.",
+        "location": {
+            "address": "José Ureta 180",
+            "postalCode": "79700000",
+            "city": "Región Metropolitana de Santiago",
+            "countryCode": "CL",
+            "region": "Chile"
+        },
+        "profiles": [
+            {
+                "network": "LinkedIn",
+                "username": "richardhapb",
+                "url": "https://www.linkedin.com/in/richard-hapb",
+                "shorturl": "linkedin.com/in/richard-hapb"
+            },
+            {
+                "network": "GitHub",
+                "username": "richardhapb",
+                "url": "https://github.com/richardhapb",
+                "shorturl": "github.com/richardhapb"
+            }
         ]
-    }
-  ],
-  "languages": [
-    {
-      "language": "Español",
-      "fluency": "Nativo"
     },
-    {
-      "language": "Inglés",
-      "fluency": "Upper Intermediate"
-    }
-  ],
-  "interests": [
-    {
-      "name": "Deportes",
-      "keywords": [
-        "GYM",
-        "Trekking",
-        "Ciclismo",
-        "Running"
-      ]
-    },
-    {
-      "name": "Libros",
-      "keywords": [
-        "Literatura clásica",
-        "Filosofía",
-        "Ciencias",
-        "Psicología"
-      ]
-    }
-  ],
-  "references": [
-    {
-      "name": "Marcelo Zuñiga",
-      "reference": "Gerente Kal Tire",
-      "phone": "(569) 9889 5328"
-    },
-    {
-      "name": "Manuel Saldaña",
-      "reference": "Docente e investigador",
-      "phone": "(569) 5383 4174"
-    }
-  ],
-  "projects": [
-    {
-      "name": "Gestión del tráfico Antofagasta",
-      "startDate": "2024-08-20",
-      "endDate": "2024-11-19",
-      "description": "Proyecto end-to-end Waze Cities program API, ETL y Machine Learning con aprendizaje automático.",
-      "highlights": [
-        "Gestión del tráfico"
-      ],
-      "image": "https://richardhapb.s3.us-east-2.amazonaws.com/project/cover/project_antof_traffic.png",
-      "qrImage": "https://richardhapb.s3.us-east-2.amazonaws.com/project/qr/qr_antof_traffic.png",
-      "technologies": ["Python", "PostgreSQL", "Dash", "ETL", "PyPlot", "Machine Learning", "MLFlow", "AWS Lambda", "Linux"],
-      "url": "https://traficoantofagasta.com"
-    },
-
-    {
-      "name": "Monitoreo de solicitudes HTTP",
-      "startDate": "2024-12-03",
-      "endDate": "2024-12-05",
-      "description": "Gestión de solicitudes desde IPs y evaluación de solicitudes maliciosas según reportes en BD.",
-      "highlights": [
-        "Análitica de solicitudes IPs"
-      ],
-      "image": "https://richardhapb.s3.us-east-2.amazonaws.com/project/cover/ip-analytics.png",
-      "qrImage": "https://richardhapb.s3.us-east-2.amazonaws.com/project/qr/qr_ip_analytics.png",
-      "technologies": ["Fluent Bit", "Kafka", "Zookeeper", "ETL", "Docker", "React", "Flask", "PostgreSQL", "Typescript/Python"],
-      "url": "https://github.com/richardhapb/ip-analytics"
-    }
-  ],
-  "softskills": [
-    "Liderazgo",
-    "Autogestión",
-    "Adaptabilidad",
-    "Autodidacta",
-    "Comunicación asertiva",
-    "Inteligencia emocional",
-    "Pensamiento crítico"
-  ],
-  "hardskills": [
-    "Habilidades analíticas",
-    "Git / GitHub",
-    "Trabajo en la nube / Cloud",
-    "Office 365 avanzado",
-    "Inglés Upper Intermediate",
-    "Metodologías Agile / Scrum",
-    "Diagramación de estructuras"
-  ]
+    "work": [
+        {
+            "name": "SyzLab",
+            "position": "Desarrollador backend",
+            "url": "https://syzlab.com",
+            "startDate": "2024",
+            "endDate": "",
+            "summary": "Me desempeño como desarrollador Django, con enfoque en poner en marcha diferentes proyectos, enfocandome en la infraestructura, la eficiancia, la escalabilidad y la seguridad.",
+            "highlights": [
+                "Impulsé la implementación de nuevos flujos de trabajo basados en git, uso de herramientas para el desarrollo, como linters y testing.",
+                "Implementé un sistema de monitoreo de logs y métricas para la identificación de problemas y mejoras en el rendimiento. Como uso de memoria y tiempo de respuesta.",
+                "Implementé ETLs para el análisis de datos y generación de reportes, lo que permitió a los líderes de negocio tomar decisiones basadas en datos."
+            ]
+        },
+        {
+            "name": "Salinas y Fabres",
+            "position": "Jefe de Servicio",
+            "url": "https://salfa.cl",
+            "startDate": "2023",
+            "endDate": "2024",
+            "summary": "Gestioné el cumplimiento de objetivos de rentabilidad, satisfacción del cliente y productividad en dos talleres de servicio automotriz con la mayor demanda a nivel nacional. Me enfoqué en mantener la operación fluida y eficiente, planificando, estandarizando flujos de trabajo y garantizando la entrega puntual de servicios, lo que aumentó la eficiencia y satisfacción del cliente.",
+            "highlights": [
+                "Formé equipo para la operación de dos talleres de servicio automotriz, garantizando el cumplimiento de los objetivos de rentabilidad. Equipo que logró generar cohesión.",
+                "Implementé planificaciones y estandarización de flujos de trabajo, evitando retrasos en las órdenes de trabajo. Lo que permitió reducir 20% en dos meses las orden de trabajo en proceso.",
+                "Mejoré la satisfacción del cliente mediante la optimización de los tiempos de respuesta y la comunicación fluida, lo que aumenta 50% NPS.",
+                "Potencié el proceso de desarrolo funcionario para los técnicos y personal administrativo, lo que impactó en una mayor motivación en el trabajo."
+            ]
+        },
+        {
+            "name": "Kal Tire",
+            "position": "Jefe de Operaciones",
+            "url": "https://kaltire.com",
+            "startDate": "2014",
+            "endDate": "2023",
+            "summary": "Pasé por varios roles como parte de mi desarrollo, desde técnico hasta Jefe de Operaciones. Lideré el proceso productivo y administrativo de la planta de Reparación y Renovado OTR, mejorando la productividad, automatizando tareas, y adoptando tecnología para el desarrollo del proceso. Además, desarrollé un sistema digital para reportes en tiempo real, implementé medidas de ahorro energético, y gestioné presupuestos anuales.",
+            "highlights": [
+                "Aumenté con el equipo la productividad y automatización en procesos clave de la planta. Un 70% en tres años.",
+                "Desarrollé un sistema digital de control operacional con reportes en tiempo real usando Forms y Dashboards. Lo que redujo el tiempo de reacción y acceso a la información en un 100%",
+                "Implementé controles energéticos que redujeron el consumo en un 40%.",
+                "Lideré y formé un equipo de 30 miembros, mejorando el clima laboral y retención del talento. 12 ascensos, dos de ellos a labores de supervisión.",
+                "Gestioné los presupuestos anuales, optimizando ingresos y gastos. Aumento en utilidad 8%.",
+                "Implementé procesos de evaluación de desempeño para el desarrollo del equipo. De 0 a 1 evaluación anual.",
+                "Implementé sistemas de reportabilidad para inspecciones en terreno, reduciendo el tiempo de emisión de cotizaciones en 3 días y disminuyendo las horas hombre necesarias.",
+                "Generé propuestas técnicas y económicas que lograron contratos que representaron más del 20% de la producción de la planta."
+            ]
+        }
+    ],
+    "education": [
+        {
+            "institution": "Universidad Arturo Prat",
+            "title": "Ingeniería Civil Industrial",
+            "url": "https://unap.cl",
+            "area": "Ingeniería",
+            "studyType": "Licenciatura",
+            "startDate": "2023",
+            "endDate": "2024"
+        },
+        {
+            "institution": "Universidad Arturo Prat",
+            "title": "Ingeniería de Ejecución Industrial",
+            "url": "https://unap.cl",
+            "area": "Ingeniería",
+            "studyType": "Pregrado",
+            "startDate": "2020",
+            "endDate": "2023"
+        },
+        {
+            "institution": "Universidad Arturo Prat",
+            "title": "Técnico Nivel Superior en Operaciones Mina",
+            "url": "https://unap.cl",
+            "area": "Minería",
+            "studyType": "Técnico",
+            "startDate": "2016",
+            "endDate": "2018"
+        },
+        {
+            "institution": "Liceo Industrial Eulogio Gordo Moneo",
+            "title": "Técnico Nivel Medio en Mecánica Automotríz",
+            "url": "https://www.liceoindustrialegm.cl",
+            "area": "Técnico",
+            "studyType": "Enseñanda Media",
+            "startDate": "2008",
+            "endDate": "2012"
+        }
+    ],
+    "certificates": [
+        {
+            "name": "Auditor Interno ISO 9001:2015, 14001:2015 y 45001:2018",
+            "date": "2022",
+            "issuer": "Bereau Veritas",
+            "url": ""
+        },
+        {
+            "name": "Auditor Interno ISO 50001:2018",
+            "date": "2023",
+            "issuer": "Bereau Veritas",
+            "url": ""
+        }
+    ],
+    "publications": [
+        {
+            "name": "Publication",
+            "publisher": "Company",
+            "releaseDate": "2014-10-01",
+            "url": "https://publication.com",
+            "summary": "Description…"
+        }
+    ],
+    "skills": [
+        {
+            "name": "Desarrollo de Software/Web",
+            "level": "Avanzado",
+            "keywords": [
+                "Python",
+                "Rust",
+                "JavaScript",
+                "CSS",
+                "Django",
+                "Flask",
+                "HTMX",
+                "Docker",
+                "Kubernetes",
+                "React",
+                "Astro",
+                "NodeJS"
+            ]
+        },
+        {
+            "name": "Data Engineer/Science",
+            "level": "Intermedio",
+            "keywords": [
+                "ETL",
+                "Apache Spark",
+                "AWS Lambda",
+                "AWS Glue",
+                "AirFlow",
+                "Dash",
+                "SQL",
+                "DynamoDB",
+                "MongoDB",
+                "Pipelines",
+                "Big Data",
+                "Databricks",
+                "Data Warehouse",
+                "Data Lake",
+                "Scikit-Learn",
+                "TensorFlow",
+                "MLFlow"
+            ]
+        }
+    ],
+    "languages": [
+        {
+            "language": "Español",
+            "fluency": "Nativo"
+        },
+        {
+            "language": "Inglés",
+            "fluency": "Upper Intermediate"
+        }
+    ],
+    "interests": [
+        {
+            "name": "Deportes",
+            "keywords": [
+                "GYM",
+                "Trekking",
+                "Ciclismo",
+                "Running"
+            ]
+        },
+        {
+            "name": "Libros",
+            "keywords": [
+                "Literatura clásica",
+                "Filosofía",
+                "Ciencias",
+                "Psicología"
+            ]
+        }
+    ],
+    "references": [
+        {
+            "name": "Marcelo Zuñiga",
+            "reference": "Gerente Kal Tire",
+            "phone": "(569) 9889 5328"
+        },
+        {
+            "name": "Manuel Saldaña",
+            "reference": "Docente e investigador",
+            "phone": "(569) 5383 4174"
+        }
+    ],
+    "projects": [
+        {
+            "name": "Neospeller",
+            "startDate": "2025-02-10",
+            "endDate": "2025-02-18",
+            "description": "Herramienta sencilla CLI hecha en Rust para corregir la gramatica de los comentarios en código de programación usando IA.",
+            "highlights": [
+                "CLI",
+                "Rust"
+            ],
+            "image": "https://richardhapb.s3.us-east-2.amazonaws.com/project/cover/neospeller.png",
+            "qrImage": "https://richardhapb.s3.us-east-2.amazonaws.com/project/qr/qr_neospeller.png",
+            "technologies": [
+                "Rust",
+                "OpenAI API"
+            ],
+            "url": "https://github.com/richardhapb/neospeller"
+        },
+        {
+            "name": "Gestión del tráfico Antofagasta",
+            "startDate": "2024-08-20",
+            "endDate": "2024-11-19",
+            "description": "Proyecto end-to-end Waze Cities program API, ETL y Machine Learning con aprendizaje automático.",
+            "highlights": [
+                "Gestión del tráfico"
+            ],
+            "image": "https://richardhapb.s3.us-east-2.amazonaws.com/project/cover/project_antof_traffic.png",
+            "qrImage": "https://richardhapb.s3.us-east-2.amazonaws.com/project/qr/qr_antof_traffic.png",
+            "technologies": [
+                "Python",
+                "PostgreSQL",
+                "Dash",
+                "ETL",
+                "PyPlot",
+                "Machine Learning",
+                "MLFlow",
+                "AWS Lambda",
+                "Linux"
+            ],
+            "url": "https://traficoantofagasta.com"
+        },
+        {
+            "name": "Monitoreo de solicitudes HTTP",
+            "startDate": "2024-12-03",
+            "endDate": "2024-12-05",
+            "description": "Gestión de solicitudes desde IPs y evaluación de solicitudes maliciosas según reportes en BD.",
+            "highlights": [
+                "Análitica de solicitudes IPs"
+            ],
+            "image": "https://richardhapb.s3.us-east-2.amazonaws.com/project/cover/ip-analytics.png",
+            "qrImage": "https://richardhapb.s3.us-east-2.amazonaws.com/project/qr/qr_ip_analytics.png",
+            "technologies": [
+                "Fluent Bit",
+                "Kafka",
+                "Zookeeper",
+                "ETL",
+                "Docker",
+                "React",
+                "Flask",
+                "PostgreSQL",
+                "Typescript/Python"
+            ],
+            "url": "https://github.com/richardhapb/ip-analytics"
+        }
+    ],
+    "softskills": [
+        "Autogestión",
+        "Autodidacta",
+        "Inteligencia emocional",
+        "Adaptabilidad",
+        "Liderazgo",
+        "Pensamiento crítico",
+        "Comunicación asertiva"
+    ],
+    "hardskills": [
+        "Habilidades analíticas",
+        "Git / GitHub",
+        "Trabajo en la nube / Cloud",
+        "Office 365 avanzado",
+        "Inglés Upper Intermediate",
+        "Metodologías Agile / Scrum",
+        "Estructuras de datos"
+    ]
 }
