@@ -1,14 +1,14 @@
 {
     "basics": {
         "name": "Richard Peña Bonifaz",
-        "label": "Software Enginner",
-        "description": "Me apasiona profundamente mi trabajo, paso la mayor parte de mi tiempo aprendiendo cosas nuevas, me gusta resolver problemas y mi enfoque está en seguir mejorando como profiesional y como persona.",
+        "label": "Software Enginer",
+        "description": "Me apasiona profundamente mi trabajo, paso la mayor parte de mi tiempo aprendiendo cosas nuevas, me gusta resolver problemas, y mi enfoque está en seguir mejorando como profesional y como persona.",
         "image": "https://richardhapb.s3.us-east-2.amazonaws.com/personal/profile.jpeg",
         "email": "richard.penab@gmail.com",
         "phone": "(569) 3444 7286",
         "url": "https://richardhapb.com",
         "qrurl": "https://richardhapb.s3.us-east-2.amazonaws.com/resources/qr.png",
-        "summary": "Soy desarrollador avanzado en Python, con el objetivo de serlo también en Rust, trabajo en proyectos personales relacionados con ML y DL, también en herramientas CLI. Mi enfoque está en siempre aprender lo necesario para resolver problemas, por eso constantemente me encuentro buscando problemas interesantes en lo que adentrarme y seguir aprendiendo. Mis principios se basan en la honestidad y la libertad.",
+        "summary": "Soy desarrollador avanzado en Python, con el objetivo de serlo también en Rust. Trabajo en proyectos personales relacionados con Machine Learning y Deep Learning, también en herramientas CLI. Mi enfoque está en siempre aprender lo necesario para resolver problemas, por eso constantemente me encuentro buscando problemas interesantes en lo que adentrarme y seguir aprendiendo. Mis principios se basan en la honestidad y la libertad.",
         "location": {
             "address": "José Ureta 180",
             "postalCode": "79700000",
@@ -38,7 +38,7 @@
             "url": "https://syzlab.com",
             "startDate": "2024",
             "endDate": "",
-            "summary": "Me desempeño como desarrollador Django, con enfoque en poner en marcha diferentes proyectos, enfocandome en infraestructura, eficiancia, escalabilidad y seguridad.",
+            "summary": "Me desempeño como desarrollador Django, enfocándome en poner en marcha diferentes proyectos, su infraestructura, eficiencia, escalabilidad y seguridad.",
             "highlights": [
                 "Impulsé la implementación de nuevos flujos de trabajo basados en git, uso de herramientas para el desarrollo, como linters y testing.",
                 "Implementé un sistema de monitoreo de logs y métricas para la identificación de problemas y mejoras en el rendimiento. Como uso de memoria y tiempo de respuesta.",
@@ -51,7 +51,7 @@
             "url": "https://salfa.cl",
             "startDate": "2023",
             "endDate": "2024",
-            "summary": "Gestioné el cumplimiento de objetivos de rentabilidad, satisfacción del cliente y productividad en dos talleres de servicio automotriz con la mayor demanda a nivel nacional. Me enfoqué en mantener la operación fluida y eficiente, planificando, estandarizando flujos de trabajo y garantizando la entrega puntual de servicios, lo que aumentó la eficiencia y satisfacción del cliente.",
+            "summary": "Gestioné el cumplimiento de objetivos de rentabilidad, satisfacción del cliente y productividad en dos talleres de servicio automotriz con la mayor demanda a nivel nacional. Me enfoqué en mantener la operación fluida y eficiente, planificando, estandarizando flujos de trabajo y garantizando la entrega puntual de servicios, lo cual aumentó la eficiencia y satisfacción del cliente.",
             "highlights": [
                 "Formé equipo para la operación de dos talleres de servicio automotriz, garantizando el cumplimiento de los objetivos de rentabilidad. Equipo que logró generar cohesión.",
                 "Implementé planificaciones y estandarización de flujos de trabajo, evitando retrasos en las órdenes de trabajo. Lo que permitió reducir 20% en dos meses las orden de trabajo en proceso.",
@@ -73,7 +73,7 @@
                 "Lideré y formé un equipo de 30 miembros, mejorando el clima laboral y retención del talento. 12 ascensos, dos de ellos a labores de supervisión.",
                 "Gestioné los presupuestos anuales, optimizando ingresos y gastos. Aumento en utilidad 8%.",
                 "Implementé procesos de evaluación de desempeño para el desarrollo del equipo. De 0 a 1 evaluación anual.",
-                "Implementé sistemas de reportabilidad para inspecciones en terreno, reduciendo el tiempo de emisión de cotizaciones en 3 días y disminuyendo las horas hombre necesarias.",
+                "Implementé sistemas de reportes para inspecciones en terreno, reduciendo el tiempo de emisión de cotizaciones en 3 días y disminuyendo las horas hombre necesarias.",
                 "Generé propuestas técnicas y económicas que lograron contratos que representaron más del 20% de la producción de la planta."
             ]
         }
@@ -108,10 +108,10 @@
         },
         {
             "institution": "Liceo Industrial Eulogio Gordo Moneo",
-            "title": "Técnico Nivel Medio en Mecánica Automotríz",
+            "title": "Técnico Nivel Medio en Mecánica Automotriz",
             "url": "https://www.liceoindustrialegm.cl",
             "area": "Técnico",
-            "studyType": "Enseñanda Media",
+            "studyType": "Enseñanza Media",
             "startDate": "2008",
             "endDate": "2012"
         }
@@ -126,7 +126,7 @@
         {
             "name": "Auditor Interno ISO 50001:2018",
             "date": "2023",
-            "issuer": "Bereau Veritas",
+            "issuer": "Bureau Veritas",
             "url": ""
         }
     ],
@@ -229,7 +229,7 @@
             "name": "Neospeller",
             "startDate": "2025-02-10",
             "endDate": "2025-02-18",
-            "description": "Herramienta sencilla CLI hecha en Rust para corregir la gramatica de los comentarios en código de programación usando IA.",
+            "description": "Herramienta sencilla CLI hecha en Rust para corregir la gramática de los comentarios en código de programación, usando IA.",
             "highlights": [
                 "CLI",
                 "Rust"
@@ -269,9 +269,9 @@
             "name": "Monitoreo de solicitudes HTTP",
             "startDate": "2024-12-03",
             "endDate": "2024-12-05",
-            "description": "Gestión de solicitudes desde IPs y evaluación de solicitudes maliciosas según reportes en BD.",
+            "description": "Gestión de direcciones IP y evaluación de solicitudes maliciosas según reportes en BD.",
             "highlights": [
-                "Análitica de solicitudes IPs"
+                "Analítica de solicitudes IPs"
             ],
             "image": "https://richardhapb.s3.us-east-2.amazonaws.com/project/cover/ip-analytics.png",
             "qrImage": "https://richardhapb.s3.us-east-2.amazonaws.com/project/qr/qr_ip_analytics.png",
