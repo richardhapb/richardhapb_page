@@ -38,7 +38,7 @@
             "url": "https://syzlab.com",
             "startDate": "2024",
             "endDate": "",
-            "technologies": ["Python", "Django", "HTMX", "Docker", "Redis", "Celery", "PostgreSQL", "Kafka"],
+            "technologies": ["Python", "Django", "HTMX", "Docker", "Redis", "Celery", "PostgreSQL", "Kafka", "OAuth 2.0"],
             "summary": "Me desempeño como desarrollador Django, enfocándome en poner en marcha diferentes proyectos, su infraestructura, eficiencia, escalabilidad y seguridad.",
             "highlights": [
                 "Impulsé la implementación de nuevos flujos de trabajo basados en git, uso de herramientas para el desarrollo, como linters y testing.",
