@@ -38,6 +38,7 @@
             "url": "https://syzlab.com",
             "startDate": "2024",
             "endDate": "",
+            "technologies": ["Python", "Django", "HTMX", "Docker", "Redis", "Celery", "PostgreSQL", "Kafka"],
             "summary": "Me desempeño como desarrollador Django, enfocándome en poner en marcha diferentes proyectos, su infraestructura, eficiencia, escalabilidad y seguridad.",
             "highlights": [
                 "Impulsé la implementación de nuevos flujos de trabajo basados en git, uso de herramientas para el desarrollo, como linters y testing.",
@@ -51,6 +52,7 @@
             "url": "https://salfa.cl",
             "startDate": "2023",
             "endDate": "2024",
+            "technologies": ["Python", "PowerBI", "SAP", "Power Automate"],
             "summary": "Gestioné el cumplimiento de objetivos de rentabilidad, satisfacción del cliente y productividad en dos talleres de servicio automotriz con la mayor demanda a nivel nacional. Me enfoqué en mantener la operación fluida y eficiente, planificando, estandarizando flujos de trabajo y garantizando la entrega puntual de servicios, lo cual aumentó la eficiencia y satisfacción del cliente.",
             "highlights": [
                 "Formé equipo para la operación de dos talleres de servicio automotriz, garantizando el cumplimiento de los objetivos de rentabilidad. Equipo que logró generar cohesión.",
@@ -65,6 +67,7 @@
             "url": "https://kaltire.com",
             "startDate": "2014",
             "endDate": "2023",
+            "technologies": ["Python", "PowerBI", "Power Automate"],
             "summary": "Pasé por varios roles como parte de mi desarrollo, desde técnico hasta Jefe de Operaciones. Lideré el proceso productivo y administrativo de la planta de Reparación y Renovado OTR, mejorando la productividad, automatizando tareas, y adoptando tecnología para el desarrollo del proceso. Además, desarrollé un sistema digital para reportes en tiempo real, implementé medidas de ahorro energético, y gestioné presupuestos anuales.",
             "highlights": [
                 "Aumenté con el equipo la productividad y automatización en procesos clave de la planta. Un 70% en tres años.",
