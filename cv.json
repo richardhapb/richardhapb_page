@@ -229,23 +229,6 @@
     ],
     "projects": [
         {
-            "name": "Neospeller",
-            "startDate": "2025-02-10",
-            "endDate": "2025-02-18",
-            "description": "Herramienta sencilla CLI hecha en Rust para corregir la gramática de los comentarios en código de programación, usando IA.",
-            "highlights": [
-                "CLI",
-                "Rust"
-            ],
-            "image": "https://richardhapb.s3.us-east-2.amazonaws.com/project/cover/neospeller.png",
-            "qrImage": "https://richardhapb.s3.us-east-2.amazonaws.com/project/qr/qr_neospeller.png",
-            "technologies": [
-                "Rust",
-                "OpenAI API"
-            ],
-            "url": "https://github.com/richardhapb/neospeller"
-        },
-        {
             "name": "Gestión del tráfico Antofagasta",
             "startDate": "2024-08-20",
             "endDate": "2024-11-19",
@@ -269,6 +252,25 @@
             "url": "https://traficoantofagasta.com"
         },
         {
+            "name": "Mente Ingeniería",
+            "startDate": "2023-05-01",
+            "endDate": "2023-05-07",
+            "description": "Página corporativa con estructura de contacto y blog con renderizado markdown.",
+            "highlights": [
+                "Integración de renderizado markdown"
+            ],
+            "image": "https://richardhapb.s3.us-east-2.amazonaws.com/project/cover/menteingenieria.png",
+            "qrImage": "https://richardhapb.s3.us-east-2.amazonaws.com/project/qr/qr_menteingenieria.png",
+            "technologies": [
+                "Django",
+                "React",
+                "TailwindCSS",
+                "OpenAI API",
+                "PostgreSQL"
+            ],
+            "url": "https://menteingenieria.com"
+        },
+        {
             "name": "Monitoreo de solicitudes HTTP",
             "startDate": "2024-12-03",
             "endDate": "2024-12-05",
@@ -290,6 +292,23 @@
                 "Typescript/Python"
             ],
             "url": "https://github.com/richardhapb/ip-analytics"
+        },
+        {
+            "name": "Neospeller",
+            "startDate": "2025-02-10",
+            "endDate": "2025-02-18",
+            "description": "Herramienta sencilla CLI hecha en Rust para corregir la gramática de los comentarios en código de programación, usando IA.",
+            "highlights": [
+                "CLI",
+                "Rust"
+            ],
+            "image": "https://richardhapb.s3.us-east-2.amazonaws.com/project/cover/neospeller.png",
+            "qrImage": "https://richardhapb.s3.us-east-2.amazonaws.com/project/qr/qr_neospeller.png",
+            "technologies": [
+                "Rust",
+                "OpenAI API"
+            ],
+            "url": "https://github.com/richardhapb/neospeller"
         }
     ],
     "softskills": [

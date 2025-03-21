@@ -10,7 +10,7 @@ const {work} = await fetchCV()
 <Section title="Experiencia">
   <div class="main">
   {
-        work.map(({name, position, summary, highlights, startDate, endDate, technologies}) => {
+        work.map(({name, position, summary, highlights, startDate, endDate}) => {
       const years = startDate + " - " + (endDate ? endDate : "Actualidad")
       return (
       <article>
@@ -22,12 +22,6 @@ const {work} = await fetchCV()
           <time>{years}</time>
         </header>
         <main>
-        <h4>Tecnologías</h4>
-        <ul class="technologies">
-          {technologies.map((t) => (
-            <li>{t}</li>
-          ))}
-        </ul>
           {summary}
         </main>
         <footer>
@@ -54,23 +48,8 @@ const {work} = await fetchCV()
     font-weight: 500;
   }
 
-  h4 {
-      font-size: 1.1rem;
-      color: #000;
-      font-weight: 300;
-      margin: 0;
-  }
-
   h3 {
     font-size: 1rem;
-  }
-
-  .technologies {
-      list-style: none;
-      display: flex;
-      flex-direction: row;
-      padding:0;
-      margin: 0.7rem 0 1.2rem 0;
   }
 
   ul {

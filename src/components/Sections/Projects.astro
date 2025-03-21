@@ -37,19 +37,20 @@ const {projects} = await fetchCV();
     #projects {
         display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
         justify-content: space-between;
         gap: 1rem;
     }
 
     .card {
         display: flex;
-        width: 14rem;
+        width: 20rem;
+        height: 25rem;
         flex-direction: column;
         border: #aaa 1px solid;
         border-radius: 10px;
         padding: 1rem;
         gap: 1rem;
-        height: 25rem;
 
         &:hover {
             background: #eee;
@@ -66,8 +67,8 @@ const {projects} = await fetchCV();
 
         img {
             display:block;
-            width: 100px;
-            height: 100px;
+            width: 150px;
+            height: 150px;
             margin: 0 auto;
         }
 
@@ -110,8 +111,27 @@ const {projects} = await fetchCV();
     }
 
     @media print {
+
+        #projects {
+            width: 100%;
+            flex-wrap: nowrap;
+            gap: 1rem;
+        }
+
+
         .card {
             page-break-inside:avoid;
+            width: 10rem;
+            height: 30rem;
+
+            img {
+                width: 80px;
+                height: 80px;
+            }
+
+            h3 {
+                font-size: 1rem;
+            }
         }
 
         p, li {
