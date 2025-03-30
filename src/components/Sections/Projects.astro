@@ -11,7 +11,7 @@ const {projects} = await fetchCV();
     {
     projects.map(p => {
     return (
-        <a href={p.url} title=`Enlace a ${p.name}`>
+        <a href={p.url} title=`Enlace a ${p.name}` target="_blank">
             <div class="card">
                 <h3>{p.name}</h3>
                 <div class="content">
