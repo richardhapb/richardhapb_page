@@ -161,7 +161,12 @@
                 "Memcached",
                 "Celery",
                 "Docker",
-                "Kubernetes"
+                "Kubernetes",
+                "Git",
+                "CI/CD",
+                "Concurrencia",
+                "Websocket",
+                "Testing"
             ]
         },
         {
@@ -178,9 +183,7 @@
                 "AWS Lambda",
                 "AWS Glue",
                 "DynamoDB",
-                "Pipelines",
                 "Big Data",
-                "Databricks",
                 "Data Warehouse",
                 "Data Lake",
                 "Scikit-Learn",
@@ -236,7 +239,7 @@
             "name": "Gestión del tráfico Antofagasta",
             "startDate": "2024-08-20",
             "endDate": "2024-11-19",
-            "description": "Proyecto end-to-end Waze Cities program API, ETL y Machine Learning con aprendizaje automático.",
+            "description": "Inteligencia de tráfico usando Waze Cities program API, ETL y Machine Learning.",
             "highlights": [
                 "Gestión del tráfico"
             ],
@@ -245,10 +248,10 @@
             "technologies": [
                 "Python",
                 "Rust",
-                "Memcached",
-                "PostgreSQL",
                 "Dash",
+                "Memcached",
                 "ETL",
+                "PostgreSQL",
                 "PyPlot",
                 "Machine Learning",
                 "MLFlow"
@@ -266,6 +269,8 @@
             "image": "https://richardhapb.s3.us-east-2.amazonaws.com/project/cover/menteingenieria.png",
             "qrImage": "https://richardhapb.s3.us-east-2.amazonaws.com/project/qr/qr_menteingenieria.png",
             "technologies": [
+                "Python",
+                "JavaScript",
                 "Django",
                 "React",
                 "TailwindCSS",
@@ -285,6 +290,8 @@
             "image": "https://richardhapb.s3.us-east-2.amazonaws.com/project/cover/ip-analytics.png",
             "qrImage": "https://richardhapb.s3.us-east-2.amazonaws.com/project/qr/qr_ip_analytics.png",
             "technologies": [
+                "Typescript",
+                "Python",
                 "Fluent Bit",
                 "Kafka",
                 "Zookeeper",
@@ -292,9 +299,7 @@
                 "Docker",
                 "React",
                 "Flask",
-                "PostgreSQL",
-                "Typescript",
-                "Python"
+                "PostgreSQL"
             ],
             "url": "https://github.com/richardhapb/ip-analytics"
         },
