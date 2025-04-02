@@ -151,14 +151,17 @@
                 "Rust",
                 "JavaScript",
                 "CSS",
+                "HTMX",
                 "Django",
                 "Flask",
-                "HTMX",
-                "Docker",
-                "Kubernetes",
                 "React",
                 "Astro",
-                "NodeJS"
+                "NodeJS",
+                "Redis",
+                "Memcached",
+                "Celery",
+                "Docker",
+                "Kubernetes"
             ]
         },
         {
@@ -167,13 +170,14 @@
             "keywords": [
                 "ETL",
                 "Apache Spark",
-                "AWS Lambda",
-                "AWS Glue",
                 "AirFlow",
+                "Kafka",
                 "Dash",
                 "SQL",
-                "DynamoDB",
                 "MongoDB",
+                "AWS Lambda",
+                "AWS Glue",
+                "DynamoDB",
                 "Pipelines",
                 "Big Data",
                 "Databricks",
@@ -240,14 +244,14 @@
             "qrImage": "https://richardhapb.s3.us-east-2.amazonaws.com/project/qr/qr_antof_traffic.png",
             "technologies": [
                 "Python",
+                "Rust",
+                "Memcached",
                 "PostgreSQL",
                 "Dash",
                 "ETL",
                 "PyPlot",
                 "Machine Learning",
-                "MLFlow",
-                "AWS Lambda",
-                "Linux"
+                "MLFlow"
             ],
             "url": "https://traficoantofagasta.com"
         },
@@ -289,7 +293,8 @@
                 "React",
                 "Flask",
                 "PostgreSQL",
-                "Typescript/Python"
+                "Typescript",
+                "Python"
             ],
             "url": "https://github.com/richardhapb/ip-analytics"
         },
