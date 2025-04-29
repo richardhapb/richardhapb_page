@@ -1,0 +1,42 @@
+---
+const { currentLang } = Astro.props;
+---
+
+<div class="language-switch no-print">
+  <a href="/" class={currentLang === 'en' ? 'active' : ''}>EN</a>
+  <a href="/es/" class={currentLang === 'es' ? 'active' : ''}>ES</a>
+</div>
+
+<style>
+  .language-switch {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    display: flex;
+    gap: 0.5rem;
+    z-index: 100;
+  }
+
+  a {
+    padding: 0.5rem 1rem;
+    border: 1px solid #ddd;
+    background: white;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+  }
+
+  a:hover {
+    background: #eee;
+  }
+
+  a.active {
+    background: #333;
+    color: white;
+    border-color: #333;
+    pointer-events: none;
+  }
+</style>
+

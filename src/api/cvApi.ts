@@ -1,12 +1,17 @@
-import type { CV } from "@/types/CV"; 
-import cv from "@cv";
+import cv_en from '@cv_en'
+import cv_es from '@cv_es'
 
-let dataCV: CV = cv;
+type CV = typeof cv_en
 
-// Se mantiene función para compatibilidad con api de AWS 'https://richardhapb.s3.us-east-2.amazonaws.com/resources/cv.json'
-export async function fetchCV(): Promise<CV> {
-  if (!dataCV.basics || Object.keys(dataCV.basics).length === 0) {
-    dataCV = cv;
-  }
-  return dataCV
+let dataCV: CV = { basics: {} } as CV
+
+export async function fetchCV(lang: string = 'en'): Promise<CV> {
+    switch (lang) {
+        case 'es':
+            dataCV = cv_es
+            break
+        default:
+            dataCV = cv_en
+    }
+    return dataCV
 }

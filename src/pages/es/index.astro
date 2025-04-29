@@ -10,14 +10,14 @@ import HardSoftSkillsCert from '@/components/Sections/HardSoftSkillsCert.astro';
 
 import { fetchCV } from '@/api/cvApi';
 
-const lang = "en"
+const lang = "es"
 
 const {basics} = await fetchCV(lang)
 const {name, label} = basics
 
 ---
 
-<Layout title={`${name}'s Resume - ${label}`} lang={lang}>
+<Layout title={`CV de ${name} - ${label}`} lang={lang}>
     <main>
         <Hero lang={lang} />
         <Experience lang={lang} />

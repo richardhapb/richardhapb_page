@@ -3,10 +3,12 @@ import Section from "@/components/Section.astro";
 
 import {fetchCV} from "@/api/cvApi"
 
-const {education} = await fetchCV()
+const {lang = "en"} = Astro.props
+
+const {education} = await fetchCV(lang)
 ---
 
-<Section title="Educación">
+<Section title={ lang === "es" ? "Educación" : "Education"}>
   {
     education.map(({institution, title}) => {
       return (
