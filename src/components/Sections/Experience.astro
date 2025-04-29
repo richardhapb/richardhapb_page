@@ -3,15 +3,17 @@ import Section from "@/components/Section.astro";
 
 import {fetchCV} from "@/api/cvApi"
 
-const {work} = await fetchCV()
+const { lang = "en" } = Astro.props
+
+const {work} = await fetchCV(lang)
 
 ---
 
-<Section title="Experiencia">
+<Section title={lang === "es" ? "Experiencia": "Experience"}>
   <div class="main">
   {
         work.map(({name, position, summary, highlights, startDate, endDate}) => {
-      const years = startDate + " - " + (endDate ? endDate : "Actualidad")
+      const years = startDate + " - " + (endDate ? endDate : ( lang === "es" ? "Actualidad" : "Currently" ))
       return (
       <article>
         <header>

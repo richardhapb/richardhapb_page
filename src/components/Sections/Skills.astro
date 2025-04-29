@@ -2,12 +2,13 @@
 import Section from "@/components/Section.astro";
 
 import {fetchCV} from "@/api/cvApi"
+const {lang = "en"} = Astro.props
 
-const {skills} = await fetchCV()
+const {skills} = await fetchCV(lang)
 
 ---
 
-<Section title="Aptitudes y habilidadaes">
+<Section title={lang === "es" ? "Aptitudes y habilidades" : "Skills" }>
   {
   skills.map(({name, keywords}) => {
     return (

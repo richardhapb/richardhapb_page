@@ -1,17 +1,18 @@
 ---
 import Section from "@/components/Section.astro";
-
 import { fetchCV } from "@/api/cvApi";
 
-const {projects} = await fetchCV();
+const { lang = "en" } = Astro.props
+
+const {projects} = await fetchCV(lang);
 ---
 
-<Section title="Proyectos">
+<Section title={lang === "es" ? "Proyectos" : "Projects"}>
     <div id="projects">
     {
     projects.map(p => {
     return (
-        <a href={p.url} title=`Enlace a ${p.name}` target="_blank">
+        <a href={p.url} title={( lang === "es" ? "Enlace a " : "Link to " ) + `${p.name}`} target="_blank">
             <div class="card">
                 <h3>{p.name}</h3>
                 <div class="content">

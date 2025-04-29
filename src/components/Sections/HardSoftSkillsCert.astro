@@ -3,15 +3,16 @@ import Section from "@/components/Section.astro";
 
 
 import {fetchCV} from "@/api/cvApi"
+const {lang = "en"} = Astro.props
 
-const {hardskills, softskills, certificates} = await fetchCV()
+const {hardskills, softskills, certificates} = await fetchCV(lang)
 
 ---
 
 <Section>
   <div class="main">
     <div class="list">
-      <h3>Habilidades blandas</h3>
+      <h3>{lang === "es" ? "Habilidades blandas" : "Soft skills" }</h3>
       <ul>
     {
       softskills.map(s => {
@@ -23,7 +24,7 @@ const {hardskills, softskills, certificates} = await fetchCV()
       </ul>
     </div>
     <div class="list">
-      <h3>Habilidades duras</h3>
+      <h3>{lang === "es" ? "Habilidades duras" : "Hard skills" }</h3>
       <ul>
     {
       hardskills.map(h => {
@@ -35,7 +36,7 @@ const {hardskills, softskills, certificates} = await fetchCV()
       </ul>
     </div>
     <div class="list">
-      <h3>Certificaciones</h3>
+      <h3>{lang === "es" ? "Certificaciones" : "Certifications" }</h3>
       <ul>
     {
       certificates.map(({name}) => {

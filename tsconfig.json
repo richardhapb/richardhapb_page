@@ -10,8 +10,11 @@
     "lib": ["DOM", "ES2022"],
     "baseUrl": ".",
     "paths": {
-      "@cv": [
-        "./cv.json"
+      "@cv_es": [
+        "./cv-es.json"
+      ],
+      "@cv_en": [
+        "./cv-en.json"
       ],
       "@/*": [
         "src/*"

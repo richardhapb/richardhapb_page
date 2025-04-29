@@ -7,10 +7,11 @@ import GitHub from "@/icons/GitHub.astro"
 import LinkedIn from "@/icons/LinkedIn.astro"
 import WorldMap from "@/icons/WorldMap.astro"
 
-
 import {fetchCV} from "@/api/cvApi"
 
-const {basics} = await fetchCV()
+const { lang = "en" } = Astro.props
+
+const {basics} = await fetchCV(lang)
 
 const { name, label, image, location, phone, profiles, email, description, qrurl, url } = basics
 const {city, region} = location
@@ -34,7 +35,7 @@ const printInfo = ["LinkedIn"]
       <footer>
         {
           email && (
-            <a href={`mailto:${email}`} title={`Enviar correo electrónico a ${name}, ${email}`} target="_blank" rel="noopener noreferrer">
+            <a href={`mailto:${email}`} title={lang === "es" ? `Enviar correo electrónico a ${name}, ${email}` : `Send email to ${name}, ${email}`} target="_blank" rel="noopener noreferrer">
                 <span><Mail /></span>
                 <span class="print">{email}</span>
             </a>
@@ -42,7 +43,7 @@ const printInfo = ["LinkedIn"]
         }
         {
           phone && (
-            <a href={`tel:${phone}`} title={`Llamar por teléfono a ${name}, ${phone}`} target="_blank" rel="noopener noreferrer">
+            <a href={`tel:${phone}`} title={lang === "es" ? `Llamar por teléfono a ${name}, ${phone}` : `Call ${name}, ${phone}`} target="_blank" rel="noopener noreferrer">
                 <span><Phone /></span>
                 <span class="print">{phone}</span>
             </a>
@@ -52,7 +53,7 @@ const printInfo = ["LinkedIn"]
           profiles.map(({network, url, shorturl}) => {
             const Icon = SOCIAL_ICONS[network]
 
-            return <a href={url} title={`Visitar el perfil de ${name} en ${network}`}>
+            return <a href={url} title={lang === "es" ? `Visitar el perfil de ${name} en ${network}` : `Visit the ${name}'s profile in ${network}`}>
                 <span class={printInfo.includes(network) ? "" : "no-print"}><Icon /></span>
                 {printInfo.includes(network) && <span class="print">{shorturl}</span>}
             </a>
@@ -65,7 +66,7 @@ const printInfo = ["LinkedIn"]
     </figure>
     <div  class="print qr">
       <img src={qrurl} alt={name} />
-      <a href={`${url}/resume`} title="Ver CV online">Ver online</a>
+      <a href={`${url}/resume`} title={ lang === "es" ? "Ver CV online" : "View online" }>{ lang === "es" ? "Ver online" : "View online" }</a>
     </div>
   </div>
 </Section>
