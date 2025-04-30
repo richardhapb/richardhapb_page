@@ -18,7 +18,6 @@ const {education} = await fetchCV(lang)
           <h2>{title}</h2>
           <h3>{institution}</h3>
           </div>
-          <time></time>
         </header>
       </article>)
     }) 
@@ -28,13 +27,11 @@ const {education} = await fetchCV(lang)
 <style>
   h2 {
     font-size: 1.1rem;
-    color: #333;
     font-weight: 400;
     margin: 0;
   }
 
   h3 {
-    color: #555;
     font-size: .85rem;
     margin: 0 0 1rem 0;
     font-weight: 300;
@@ -45,12 +42,6 @@ const {education} = await fetchCV(lang)
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
-  }
-
-  time {
-    color: #444;
-    font-weight: 500;
-    margin-bottom: 1rem;
   }
 </style>
 

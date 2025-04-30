@@ -74,7 +74,6 @@ const {projects} = await fetchCV(lang);
         }
 
         p {
-            color: #777;
             margin: 0;
             padding: 0;
         }
@@ -93,22 +92,14 @@ const {projects} = await fetchCV(lang);
             flex-wrap: wrap;
             gap: 0.8rem;
         }
-
-        li {
-            color: #000;
-        }
     }
 
 
     a {
         display: block;
         max-width: 320px;
-        color: black;
         text-decoration: none;
         font-size: 0.9rem;
-        &:visited {
-            color: black;
-        }
     }
 
     @media print {
