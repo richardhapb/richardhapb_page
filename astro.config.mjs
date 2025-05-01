@@ -11,8 +11,8 @@ export default defineConfig({
     env: {
         schema: {
             MAIL_API_KEY: envField.string({ context: 'server', access: 'secret' }),
-            MAIL_ENDPOINT: envField.string({ context: 'server', access: 'secret' }),
-            PERSONAL_EMAIL: envField.string({ context: 'server', access: 'secret' }),
+            MAIL_ENDPOINT: envField.string({ context: 'server', access: 'public' }),
+            PERSONAL_EMAIL: envField.string({ context: 'server', access: 'public' }),
         }
     }
 });
