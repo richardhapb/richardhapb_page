@@ -1,134 +1,195 @@
 ---
-import Section from "@/components/Section.astro";
 import { fetchCV } from "@/api/cvApi";
 
 const { lang = "en" } = Astro.props
 
 const {projects} = await fetchCV(lang);
 ---
-
-<Section title={lang === "es" ? "Proyectos" : "Projects"}>
-    <div id="projects">
+<section id="projects">
     {
     projects.map(p => {
     return (
-        <a href={p.url} title={( lang === "es" ? "Enlace a " : "Link to " ) + `${p.name}`} target="_blank">
-            <div class="card">
+    <a href={p.url} title={( lang === "es" ? "Enlace a " : "Link to " ) + `${p.name}`} target="_blank">
+        <div class="card">
+            <img class="no-print" src={p.image} title={p.name} alt="Project Image" />
+            <img class="print" src={p.qrImage} title={p.name} alt="Project Image" />
+            <div class="content">
                 <h3>{p.name}</h3>
-                <div class="content">
-                    <img class="no-print" src={p.image} title={p.name} alt="Project Image" />
-                    <img class="print" src={p.qrImage} title={p.name} alt="Project Image" />
-                    <p>{p.description}</p>
-                </div>
+                <p>{p.description}</p>
                 <ul>
                     {p.technologies.map(t => {
                     return <li>{t}</li>
                     })
-                }
+                    }
                 </ul>
+            </div>
         </div>
-        </a>
-        )
+    </a>
+    )
     })
     }
-    </div>
-</Section>
-
+</section>
 <style>
-    #projects {
+
+
+#projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #3333;
+    backdrop-filter: blur(5px);
+    gap: 1rem;
+    position: relative;
+    z-index: 1;
+    padding: 1rem 0;
+}
+
+.card {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: start;
+    align-items: start;
+    border: #333 1px solid;
+    border-radius: 5px;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    position: relative;
+
+    &:hover {
+        background: #2223;
+        border: #333 1px solid;
+    }
+
+    .content {
         display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
         gap: 1rem;
     }
 
-    .card {
+    img {
+        display:block;
+        width: 200px;
+        height: 200px;
+        margin: 0 1rem;
+    }
+
+    p {
+        margin: 0;
+        padding: 0;
+    }
+
+    h3 {
+        text-align: center;
+        margin: 0;
+        height: 2.5rem;
+    }
+
+    ul {
         display: flex;
-        width: 20rem;
-        height: 25rem;
-        flex-direction: column;
-        border: #aaa 1px solid;
-        border-radius: 10px;
-        padding: 1rem;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 0.8rem;
+    }
+}
+
+
+a {
+    display: block;
+    text-decoration: none;
+    width: 100%;
+    font-size: 1.1rem;
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+p {
+    font-size: 1.3rem;
+}
+
+@media print {
+
+    #projects {
+        width: 100%;
+        flex-wrap: nowrap;
         gap: 1rem;
+    }
 
-        &:hover {
-            background: #eee;
-            border: #333 1px solid;
-        }
 
-        .content {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: flex-start;
-            gap: 1rem;
-        }
+    .card {
+        page-break-inside:avoid;
+        width: 10rem;
+        height: 30rem;
 
         img {
-            display:block;
-            width: 150px;
-            height: 150px;
-            margin: 0 auto;
-        }
-
-        p {
-            margin: 0;
-            padding: 0;
+            width: 80px;
+            height: 80px;
         }
 
         h3 {
-            text-align: center;
-            margin: 0;
-            height: 2.5rem;
-        }
-
-        ul {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 0.8rem;
+            font-size: 1rem;
         }
     }
 
-
-    a {
-        display: block;
-        max-width: 320px;
-        text-decoration: none;
-        font-size: 0.9rem;
+    p, li {
+        font-size: 1.3rem;
     }
-
-    @media print {
-
-        #projects {
+}
+@media (max-width: 768px) {
+    .card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        
+        img {
             width: 100%;
-            flex-wrap: nowrap;
-            gap: 1rem;
+            height: auto;
+            margin: 0 0 1rem 0;
         }
 
-
-        .card {
-            page-break-inside:avoid;
-            width: 10rem;
-            height: 30rem;
-
-            img {
-                width: 80px;
-                height: 80px;
-            }
+        .content {
+            align-items: center;
 
             h3 {
+                height: auto;
+                margin-bottom: 1rem;
+            }
+
+            p {
+                font-size: 1.1rem;
+                text-align: center;
+            }
+
+            ul {
+                justify-content: center;
+            }
+        }
+    }
+
+    a {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #projects {
+        padding: 1rem;
+    }
+
+    .card {
+        padding: 0.8rem;
+
+        .content {
+            p {
                 font-size: 1rem;
             }
         }
-
-        p, li {
-            font-size: 0.9rem;
-        }
     }
+}
 </style>
 

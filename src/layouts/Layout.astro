@@ -10,6 +10,7 @@ const { title, path, lang = 'en' } = Astro.props;
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width" />
         <link rel="icon" type="image/png" href="/favicon.png" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
         <meta name="generator" content={Astro.generator} />
         <title>{title}</title>
     </head>
@@ -28,11 +29,12 @@ const { title, path, lang = 'en' } = Astro.props;
 }
 
 html {
-    --main-bg-color: #222;
+    --main-bg-color: #111;
     --main-text-color: #eee;
     --secondary-text-color: #bbb;
     --tertiary-text-color: #aaa;
     --subtext-color: #ddd;
+    --highlight: #F8F059;
 
 
     font: Menlo, Monaco, 'Lucida Console', 'Courier New', Courier, monospace;
@@ -84,6 +86,10 @@ ul {
 
 h1, h2, h3, h4 {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+h1 {
+    color: var(--highlight);
 }
 
 h2 {

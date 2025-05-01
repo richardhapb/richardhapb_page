@@ -12,11 +12,15 @@ const { title } = Astro.props
     margin: 0 auto 95px;
   }
 
+  h1 {
+      color: var(--main-text-color);
+  }
+
   @media print {
     section {
       page-break-before: auto;
       page-break-inside: auto;
-			margin: 0 auto 45px;
+            margin: 0 auto 45px;
     }
 
     h1 {

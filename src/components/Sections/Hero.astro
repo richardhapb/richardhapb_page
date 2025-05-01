@@ -17,8 +17,8 @@ const { name, label, image, location, phone, profiles, email, description, qrurl
 const {city, region} = location
 
 const SOCIAL_ICONS: Record<string, any> = {
-  GitHub,
-  LinkedIn
+    GitHub,
+    LinkedIn
 }
 
 const printInfo = ["LinkedIn"]
@@ -26,91 +26,92 @@ const printInfo = ["LinkedIn"]
 ---
 
 <Section>
-  <div class="container">
-    <div>
-      <h1>{name}</h1>
-      <h2>{label}</h2>
-      <h3>{description}</h3>
-      <span><WorldMap />{city}, {region}</span>
-      <footer>
-        {
-          email && (
-            <a href={`mailto:${email}`} title={lang === "es" ? `Enviar correo electrónico a ${name}, ${email}` : `Send email to ${name}, ${email}`} target="_blank" rel="noopener noreferrer">
-                <span><Mail /></span>
-                <span class="print">{email}</span>
-            </a>
-          )
-        }
-        {
-          phone && (
-            <a href={`tel:${phone}`} title={lang === "es" ? `Llamar por teléfono a ${name}, ${phone}` : `Call ${name}, ${phone}`} target="_blank" rel="noopener noreferrer">
-                <span><Phone /></span>
-                <span class="print">{phone}</span>
-            </a>
-          )
-        }
-        {
-          profiles.map(({network, url, shorturl}) => {
-            const Icon = SOCIAL_ICONS[network]
+    <div class="container">
+        <div>
+            <h1>{name}</h1>
+            <h2>{label}</h2>
+            <h3>{description}</h3>
+            <span><WorldMap />{city}, {region}</span>
+            <footer>
+                {
+                email && (
+                <a href={`mailto:${email}`} title={lang === "es" ? `Enviar correo electrónico a ${name}, ${email}` : `Send email to ${name}, ${email}`} target="_blank" rel="noopener noreferrer">
+                    <span><Mail /></span>
+                    <span class="print">{email}</span>
+                </a>
+                )
+                }
+                {
+                phone && (
+                <a href={`tel:${phone}`} title={lang === "es" ? `Llamar por teléfono a ${name}, ${phone}` : `Call ${name}, ${phone}`} target="_blank" rel="noopener noreferrer">
+                    <span><Phone /></span>
+                    <span class="print">{phone}</span>
+                </a>
+                )
+                }
+                {
+                profiles.map(({network, url, shorturl}) => {
+                const Icon = SOCIAL_ICONS[network]
 
-            return <a href={url} title={lang === "es" ? `Visitar el perfil de ${name} en ${network}` : `Visit the ${name}'s profile in ${network}`}>
-                <span class={printInfo.includes(network) ? "" : "no-print"}><Icon /></span>
-                {printInfo.includes(network) && <span class="print">{shorturl}</span>}
-            </a>
-          })
-        }
-      </footer>
+                return <a href={url} title={lang === "es" ? `Visitar el perfil de ${name} en ${network}` : `Visit the ${name}'s profile in ${network}`}>
+                    <span class={printInfo.includes(network) ? "" : "no-print"}><Icon /></span>
+                    {printInfo.includes(network) && <span class="print">{shorturl}</span>}
+                </a>
+                })
+                }
+            </footer>
+        </div>
+        <figure>
+            <img src={image} alt={name} class="no-print" />
+        </figure>
+        <div  class="print qr">
+            <img src={qrurl} alt={name} />
+            <a href={`${url}/resume`} title={ lang === "es" ? "Ver CV online" : "View online" }>{ lang === "es" ? "Ver online" : "View online" }</a>
+        </div>
     </div>
-    <figure>
-      <img src={image} alt={name} class="no-print" />
-    </figure>
-    <div  class="print qr">
-      <img src={qrurl} alt={name} />
-      <a href={`${url}/resume`} title={ lang === "es" ? "Ver CV online" : "View online" }>{ lang === "es" ? "Ver online" : "View online" }</a>
-    </div>
-  </div>
 </Section>
 
 <style>
-  .container {
+.container {
     display: flex;
     flex-direction: column;
     gap: 1rem;
     align-items: center;
-  }
+}
 
-  @media screen and (min-width: 800px) {
+@media screen and (min-width: 800px) {
     .container {
-      flex-direction: row;
+        flex-direction: row;
     }
-  }
-  
-  h1 {
+}
+
+h1 {
+    color: var(--main-text-color);
     font-size: 2rem;
     margin: 0.6rem 0;
-  }
+}
 
-  h2 {
+h2 {
     font-size: 1.2rem;
     font-weight: 500;
     text-wrap: balance;
     margin: 0;
-  }
+}
 
-  h3 {
+h3 {
     color: var(--subtext-color);
     font-size: 1rem;
     font-weight: 400;
-  }
+}
 
-  img {
+img {
     aspect-ratio: 1 / 1;
     object-fit: cover;
     width: 130px;
     margin-top: 2rem;
-  }
+}
 
-  span {
+span {
     color: var(--tertiary-text-color);
     display: flex;
     align-items: center;
@@ -119,21 +120,21 @@ const printInfo = ["LinkedIn"]
     letter-spacing: -0.05rem;
     font-style: italic;
     padding: .5rem 0;
-  }
+}
 
-  .info {
+.info {
     display: flex;
     flex-direction: column;
     gap: .5rem;
-  }
+}
 
-  footer {
+footer {
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
-  }
+}
 
-  footer a {
+footer a {
     color: #444;
     display: inline-flex;
     align-items: center;
@@ -143,55 +144,55 @@ const printInfo = ["LinkedIn"]
     width: 32px;
     height: 32px;
     transition: all 0.3s ease;
-  }
+}
 
-  footer a:hover {
+footer a:hover {
     background: #eee;
     color: #111;
-  }
+}
 
-  .print {
+.print {
     display: none;
-  }
+}
 
-  @media print {
+@media print {
     .print {
-      display: block;
+        display: block;
     }
 
     footer a {
-      border: none;
-      width: auto;
-      height: auto;
-      padding: 0;
-      text-wrap: nowrap;
-      gap: 0.7rem;
-      margin-right: 1.2rem;
+        border: none;
+        width: auto;
+        height: auto;
+        padding: 0;
+        text-wrap: nowrap;
+        gap: 0.7rem;
+        margin-right: 1.2rem;
     }
 
     img {
-      width: 100px;
+        width: 100px;
     }
 
     footer {
-      flex-direction: row;
-      gap: 0rem;
+        flex-direction: row;
+        gap: 0rem;
     }
     .no-print {
-      display: none;
+        display: none;
     }
     .container {
-      flex-direction: row;
+        flex-direction: row;
     }
     .qr {
-      display: flex !important;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+        display: flex !important;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     .qr a {
-      color: var(--secondary-text-color);
+        color: var(--secondary-text-color);
     }
-  }
+}
 </style>
