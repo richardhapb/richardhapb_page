@@ -10,9 +10,9 @@ export default defineConfig({
     }),
     env: {
         schema: {
-            API_URL: {
-                envField: envField.string({ context: 'server', access: 'secret' })
-            },
+            MAIL_API_KEY: envField.string({ context: 'server', access: 'secret' }),
+            MAIL_ENDPOINT: envField.string({ context: 'server', access: 'secret' }),
+            PERSONAL_EMAIL: envField.string({ context: 'server', access: 'secret' }),
         }
-    },
+    }
 });
