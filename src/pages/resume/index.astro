@@ -1,35 +1,7 @@
 ---
-import Layout from '@/layouts/Layout.astro';
-
-import Education from '@/components/Sections/Education.astro';
-import Experience from '@/components/Sections/Experience.astro';
-import Hero from '@/components/Sections/Hero.astro';
-import Skills from '@/components/Sections/Skills.astro';
-import HardSoftSkillsCert from '@/components/Sections/HardSoftSkillsCert.astro';
-
-import { fetchCV } from '@/api/cvApi';
-
-const lang = "en"
-
-const {basics} = await fetchCV(lang)
-const {name, label} = basics
+import Resume from '@/components/Pages/Resume.astro';
 
 ---
 
-<Layout title={`${name}'s Resume - ${label}`} lang={lang} path="resume">
-    <main>
-        <Hero lang={lang} />
-        <Experience lang={lang} />
-        <Education lang={lang} />
-        <Skills lang={lang} />
-        <HardSoftSkillsCert lang={lang} />
-    </main>
-</Layout>
+<Resume lang="en" />
 
-<style>
-    main {
-        padding: 1em;
-        margin: auto;
-        width: 100%;
-    }
-</style>

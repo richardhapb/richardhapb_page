@@ -66,7 +66,7 @@ const printInfo = ["LinkedIn"]
         </figure>
         <div  class="print qr">
             <img src={qrurl} alt={name} />
-            <a href={`${url}/resume`} title={ lang === "es" ? "Ver CV online" : "View online" }>{ lang === "es" ? "Ver online" : "View online" }</a>
+            <a href={`${url}/resume`} title={ lang === "es" ? "Ver online" : "View online" }>{ lang === "es" ? "Ver online / Proyectos" : "View online / Projects" }</a>
         </div>
     </div>
 </Section>
@@ -156,6 +156,9 @@ footer a:hover {
 }
 
 @media print {
+    h1, h2, h3, p, li, time {
+        color: black;
+    }
     .print {
         display: block;
     }
@@ -193,6 +196,8 @@ footer a:hover {
 
     .qr a {
         color: var(--secondary-text-color);
+        font-size: 0.9rem;
+        font-style: italic;
     }
 }
 </style>
