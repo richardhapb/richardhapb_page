@@ -1,0 +1,30 @@
+---
+---
+
+<header class="header">
+    <nav class="nav-wrapper">
+        <slot />
+    </nav>
+</header>
+<style>
+    .header {
+        padding: 2rem 2rem;
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(10px);
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .nav-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    @media print {
+        .header {
+            display: none;
+        }
+    }
+</style>

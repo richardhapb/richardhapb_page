@@ -1,12 +1,7 @@
 ---
 import LanguageSwitch from '@/components/LanguageSwitch.astro';
 
-interface Props {
-    title: string;
-    lang?: string;
-}
-
-const { title, lang = 'en' } = Astro.props;
+const { title, path, lang = 'en' } = Astro.props;
 
 ---
 <!doctype html>
@@ -15,73 +10,110 @@ const { title, lang = 'en' } = Astro.props;
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width" />
         <link rel="icon" type="image/png" href="/favicon.png" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
         <meta name="generator" content={Astro.generator} />
         <title>{title}</title>
     </head>
     <body>
-        <LanguageSwitch currentLang={lang} />
-        <slot />
+        <div>
+            <LanguageSwitch currentLang={lang} path={path} />
+            <slot />
     </body>
 </html>
 <style is:global>
-    @page{
-        size: letter;
-        margin-top: 50px;
-        margin-bottom: 50px;
+
+@page{
+    size: letter;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+html {
+    --main-bg-color: #111;
+    --main-text-color: #eee;
+    --secondary-text-color: #bbb;
+    --tertiary-text-color: #aaa;
+    --subtext-color: #ddd;
+    --highlight: #F8F059;
+
+
+    font: Menlo, Monaco, 'Lucida Console', 'Courier New', Courier, monospace;
+    color: #eee;
+    background-color: var(--main-bg-color);
+    letter-spacing: -0.025em;
+}
+
+.print {
+    display: none !important;
+}
+
+@media print {
+    h1, h2, h3, p, li {
+        color: black;
     }
 
     html {
-        font: Menlo, Monaco, 'Lucida Console', 'Courier New', Courier, monospace;
         background: #fff;
-        letter-spacing: -0.025em;
     }
 
     .print {
+        display: block !important;
+    }
+
+    .no-print {
         display: none !important;
     }
 
-    @media print {
-        .print {
-            display: block !important;
-        }
-
-        .no-print {
-            display: none !important;
-        }
-
-        section {
-            page-break-before: auto;
-        }
+    section {
+        page-break-before: auto;
     }
+}
 
-    body, figure {
-        margin: 0;
-        padding: 0;
-    }
+body, figure {
+    margin: 0;
+    padding: 0;
+}
 
-    a {
-        text-decoration: none;
-    }
+a {
+    text-decoration: none;
+}
 
-    ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-    }
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
 
-    *, *::before, *::after {
-        box-sizing: border-box;
-    }
+*, *::before, *::after {
+    box-sizing: border-box;
+}
 
-    h1, h2, h3, h4 {
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    }
+h1, h2, h3, h4 {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
 
-    p {
-        color: #333;
-        font-size: 1rem;
-        line-height: 1.5;
-        margin: 0;
-        text-wrap: pretty;
-    }
+h1 {
+    color: var(--highlight);
+}
+
+h2 {
+    color: var(--secondary-text-color);
+}
+
+h3 {
+    color: var(--tertiary-text-color);
+}
+
+a, a:visited {
+    color: var(--secondary-text-color);
+}
+
+p {
+    color: var(--main-text-color);
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 0;
+    text-wrap: pretty;
+}
 </style>
+
