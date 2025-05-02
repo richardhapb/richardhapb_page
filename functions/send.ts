@@ -16,9 +16,6 @@ interface Env {
 }
 
 async function sendEmail(env: Env, { name, email, messageHtml, lang }: MessageObject) {
-
-	console.log(env)
-
 	const resend = new Resend(env.MAIL_API_KEY);
 	const result = await resend.emails.send({
 		from: 'Richard Peña <contact@richardhapb.com>',
