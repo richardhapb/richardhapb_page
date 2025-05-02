@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+	"target": "ES2020",				// o "esnext"
+	"module": "ESNext",				// para usar módulos nativos
+	"lib": ["ES2020"],				// igual que el target
+	"types": ["@cloudflare/workers-types"]
+  }
+}

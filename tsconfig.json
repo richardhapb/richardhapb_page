@@ -1,24 +1,30 @@
 {
-  "extends": "astro/tsconfigs/strict",
-  "compilerOptions": {
-    "target": "ES5",
-    "module": "ES2022",
-    "strict": true,
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
-    "lib": ["DOM", "ES2022"],
-    "baseUrl": ".",
-    "paths": {
-      "@cv_es": [
-        "./cv-es.json"
-      ],
-      "@cv_en": [
-        "./cv-en.json"
-      ],
-      "@/*": [
-        "src/*"
-      ]
-    }
-  }
+	"extends": "astro/tsconfigs/strict",
+	"compilerOptions": {
+		"target": "ES5",
+		"module": "ES2022",
+		"strict": true,
+		"esModuleInterop": true,
+		"skipLibCheck": true,
+		"forceConsistentCasingInFileNames": true,
+		"lib": [
+			"DOM",
+			"ES2022"
+		],
+		"baseUrl": ".",
+		"exclude": [
+			"functions/**/*"
+		],
+		"paths": {
+			"@cv_es": [
+				"./cv-es.json"
+			],
+			"@cv_en": [
+				"./cv-en.json"
+			],
+			"@/*": [
+				"src/*"
+			]
+		}
+	}
 }
