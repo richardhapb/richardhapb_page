@@ -19,7 +19,7 @@ const title = lang == "en" ? `${name}'s Resume - ${label}` : `CV de ${name} - ${
 
 ---
 
-<Layout title={title} lang={lang} path={lang == "en" ? "resume" : "/resume"}>
+<Layout title={title} lang={lang} path="/resume">
 	<NavWrapper>
 		<a href={lang == "en" ? "/" : "/es"} class="back-link">
 			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -57,6 +57,7 @@ const title = lang == "en" ? `${name}'s Resume - ${label}` : `CV de ${name} - ${
 main {
 	padding: 2rem;
 	gap: 2rem;
+	margin: 0 auto;
 	max-width: 1200px;
 }
 
