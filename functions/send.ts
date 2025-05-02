@@ -38,7 +38,7 @@ export async function onRequestPost(context: { request: Request, env: Env }): Pr
 		const form = await request.formData();
 		const name = form.get("name")?.toString() || "";
 		const email = form.get("email")?.toString() || "";
-		const message = form.get("messageHtml")?.toString() || "";
+		const message = form.get("message")?.toString() || "";
 		const lang = form.get("lang")?.toString() || "en"; try {
 			const { error } = await sendEmail(env, {
 				name: name,
