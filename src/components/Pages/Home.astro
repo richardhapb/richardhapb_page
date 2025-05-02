@@ -257,6 +257,7 @@ h2 {
 			cursor: pointer;
 			transition: all 0.2s ease-out;
 			position: relative;
+			color: black;
 			border: none;
 
 			&:disabled {
@@ -438,16 +439,45 @@ h1 {
 		.media {
 			width: 100%;
 
-			input[type="submit"] {
+			button[type="submit"] {
 				width: 100%;
+				color: black;
 			}
 		}
+	}
+
+	.hero {
+		gap: 3rem;
+	}
+
+	.project-indicator {
+		position: relative;
+	}
+
+}
+
+
+	@media (max-height: 1000px) {
+		.project-indicator {
+			position: relative;
+		}
+	}
+
+@media (max-height: 660px) {
+	.hero {
+		margin-top: 1rem;
+		justify-content: start;
 	}
 }
 
 @media (max-width: 480px) {
 	.hero {
-		gap: 5rem;
+		margin-top: 1rem;
+		justify-content: start;
+	}
+
+	.hero {
+		gap: 2rem;
 	}
 
 	.presentation h1 {
