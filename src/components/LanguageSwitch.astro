@@ -4,41 +4,41 @@ const { currentLang, path } = Astro.props;
 ---
 
 <div class="language-switch no-print">
-    <a href={path} class={currentLang === 'en' ? 'active' : ''}>EN</a>
-    <a href={`${path}/es`} class={currentLang === 'es' ? 'active' : ''}>ES</a>
+	<a href={path} class={currentLang === 'en' ? 'active' : ''}>EN</a>
+	<a href={`${path}/es`} class={currentLang === 'es' ? 'active' : ''}>ES</a>
 </div>
 
 <style>
 .language-switch {
-    position: fixed;
-    top: 1rem;
-    right: 1rem;
-    display: flex;
-    gap: 0.5rem;
-    z-index: 100;
+	position: fixed;
+	top: 1rem;
+	right: 1rem;
+	display: flex;
+	gap: 0.5rem;
+	z-index: 100;
 }
 
 a {
-    padding: 0.5rem 1rem;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    background: #333;
-    cursor: pointer;
-    text-decoration: none;
-    display: inline-block;
-    z-index: 2;
+	padding: 0.5rem 1rem;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	background: #333;
+	cursor: pointer;
+	text-decoration: none;
+	display: inline-block;
+	z-index: 2;
 }
 
 a:hover {
-    background: #aaa;
-    color: black;
+	background: #aaa;
+	color: black;
 }
 
 a.active {
-    background: var(--highlight);
-    border-color: #fff;
-    color: black;
-    pointer-events: none;
+	background: var(--highlight);
+	border-color: #fff;
+	color: black;
+	pointer-events: none;
 }
 </style>
 

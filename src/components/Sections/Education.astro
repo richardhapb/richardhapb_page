@@ -8,44 +8,40 @@ const {education} = await fetchCV(lang)
 ---
 
 <Section title={ lang === "es" ? "Educación" : "Education"}>
-    {
-    education.map(({institution, title}) => {
-    return (
-    <article>
-        <header>
-            <div>
-                <h2>{title}</h2>
-                <h3>{institution}</h3>
-            </div>
-        </header>
-    </article>)
-    }) 
-    }
+	{
+	education.map(({institution, title}) => {
+	return (
+	<article>
+		<header>
+			<div>
+				<h2>{title}</h2>
+				<h3>{institution}</h3>
+			</div>
+		</header>
+	</article>)
+	})
+	}
 </Section>
 
 <style>
 
-article {
-    min-width: 700px;
-}
-
 h2 {
-    font-size: 1.1rem;
-    font-weight: 400;
-    margin: 0;
+	font-size: 1.1rem;
+	font-weight: 400;
+	margin: 0;
 }
 
 h3 {
-    font-size: .85rem;
-    margin: 0 0 1rem 0;
-    font-weight: 300;
+	font-size: .85rem;
+	margin: 0 0 1rem 0;
+	font-weight: 300;
 }
 
 header {
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-    align-items: flex-start;
+	display: flex;
+	flex-direction: row;
+	justify-content: start;
+	align-items: flex-start;
 }
 </style>
 

@@ -11,102 +11,102 @@ const {hardskills, softskills, certificates} = await fetchCV(lang)
 
 <Section>
   <div class="main">
-    <div class="list">
-      <h3>{lang === "es" ? "Habilidades blandas" : "Soft skills" }</h3>
-      <ul>
-    {
-      softskills.map(s => {
-        return (
-        <li>{s}</li>
-      ) 
-      })
-    }
-      </ul>
-    </div>
-    <div class="list">
-      <h3>{lang === "es" ? "Habilidades duras" : "Hard skills" }</h3>
-      <ul>
-    {
-      hardskills.map(h => {
-        return (
-        <li>{h}</li>
-      ) 
-      })
-    }
-      </ul>
-    </div>
-    <div class="list">
-      <h3>{lang === "es" ? "Certificaciones" : "Certifications" }</h3>
-      <ul>
-    {
-      certificates.map(({name}) => {
-        return (
-        <li>{name}</li>
-      ) 
-      })
-    }
-      </ul>
-    </div>
+	<div class="list">
+	  <h3>{lang === "es" ? "Habilidades blandas" : "Soft skills" }</h3>
+	  <ul>
+	{
+	  softskills.map(s => {
+		return (
+		<li>{s}</li>
+	  )
+	  })
+	}
+	  </ul>
+	</div>
+	<div class="list">
+	  <h3>{lang === "es" ? "Habilidades duras" : "Hard skills" }</h3>
+	  <ul>
+	{
+	  hardskills.map(h => {
+		return (
+		<li>{h}</li>
+	  )
+	  })
+	}
+	  </ul>
+	</div>
+	<div class="list">
+	  <h3>{lang === "es" ? "Certificaciones" : "Certifications" }</h3>
+	  <ul>
+	{
+	  certificates.map(({name}) => {
+		return (
+		<li>{name}</li>
+	  )
+	  })
+	}
+	  </ul>
+	</div>
   </div>
 </Section>
 
 
 <style>
   .main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-left: 10%;
-    gap: 5rem;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: start;
+	justify-content: center;
+	gap: 3rem;
   }
 
   h3 {
-    font-size: 1.1rem;
+	font-size: 1.1rem;
   }
 
   ul {
-    display: flex;
-    flex-direction: column;
-    gap: 0.8rem;
-    list-style: circle inside;
-    font-size: .95rem;
-    margin: 1.8rem 0;
+	display: flex;
+	flex-direction: column;
+	gap: 0.8rem;
+	list-style: circle inside;
+	font-size: .95rem;
+	margin: 1.8rem 0;
   }
 
   .list {
-    min-width: 80%;
+	max-width: 25%;
   }
 
 
   @media screen and (min-width: 800px) {
-    .main {
-      flex-direction: row;
-      flex-wrap: nowrap;
-      align-items: normal;
-      justify-content: normal;
-      margin-left: 0;
-    }
+	.main {
+	  flex-direction: row;
+	  flex-wrap: nowrap;
+	  align-items: normal;
+	  justify-content: normal;
+	  margin-left: 0;
+	}
 
-    .list {
-      min-width: auto;
-      width: calc(100% / 3);
-    }
+	.list {
+	  min-width: auto;
+	  width: calc(100% / 3);
+	}
   }
 
   @media print {
-    .main {
-      flex-direction: row;
-      flex-wrap: nowrap;
-      align-items: normal;
-      justify-content: normal;
-      margin-left: 0;
-    }
+	.main {
+	  flex-direction: row;
+	  flex-wrap: nowrap;
+	  align-items: normal;
+	  justify-content: normal;
+	  margin-left: 0;
+	}
 
-    .list {
-      min-width: auto;
-      width: calc(100% / 3);
-    }
+	.list {
+	  min-width: auto;
+	  width: calc(100% / 3);
+	}
   }
 
 
