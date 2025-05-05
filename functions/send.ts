@@ -37,6 +37,10 @@ export async function onRequestPost(context: { request: Request, env: Env }): Pr
 		const email = form.get("email")?.toString() || "";
 		const message = form.get("message")?.toString() || "";
 		const lang = form.get("lang")?.toString() || "en"; try {
+			if (name == "RobertBef") {
+				return new Response("Blocked", { status: 403 })
+		}
+
 			const { error } = await sendEmail(env, {
 				name: name,
 				email: email,
