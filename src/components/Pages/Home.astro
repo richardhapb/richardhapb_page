@@ -84,10 +84,12 @@ const presentation = lang == "en" ?
 		const formData = new FormData(form);
 
 		try {
-			const message = formData.get("message")?.toString() || "";
+			const name = (formData.get("name")?.toString() || "").trim();
+			const email = (formData.get("email")?.toString() || "").trim();
+			const message = (formData.get("message")?.toString() || "").trim();
 
-			if (message.trim().length === 0) {
-				showToast("Invalid message");
+			if (message.length === 0 || name.length === 0 || email.length === 0) {
+				showToast("Invalid data");
 				return;
 			}
 
