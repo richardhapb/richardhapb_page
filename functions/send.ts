@@ -40,15 +40,21 @@ export async function onRequestPost(context: { request: Request, env: Env }): Pr
 			return new Response("Blocked", { status: 403 });
 		}
 
+		try {
+			const ts = Number(form.get("ts"));
+			if (Date.now() - ts < 5000) {
+				return new Response("Blocked", { status: 403 });;
+			}
+		} catch {
+			return new Response("Bad request", { status: 404 });
+		}
+
 		const name = form.get("name")?.toString() || "";
 		const email = form.get("email")?.toString() || "";
 		const message = form.get("message")?.toString() || "";
-		const lang = form.get("lang")?.toString() || "en"; try {
+		const lang = form.get("lang")?.toString() || "en";
 
-			if (name == "RobertBef") {
-				return new Response("Blocked", { status: 403 })
-			}
-
+		try {
 			const { error } = await sendEmail(env, {
 				name: name,
 				email: email,
