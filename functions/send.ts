@@ -26,11 +26,6 @@ export async function onRequestPost(context: { request: Request, env: Env }): Pr
 
 	if (request.method === "POST" && new URL(request.url).pathname === "/send") {
 
-		const enabled = await env.MAIL_NS.get("enabled");
-		if (enabled === "false") {
-			return new Response("Service disabled", { status: 503 });
-		}
-
 		const form = await request.formData();
 
 		// 🛡️ Honeypot anti-bot
@@ -56,6 +51,12 @@ export async function onRequestPost(context: { request: Request, env: Env }): Pr
 		if (message.length === 0 || name.length === 0 || email.length === 0) {
 			return new Response("Bad request", { status: 400 });
 		}
+
+		const enabled = await env.MAIL_NS.get("enabled");
+		if (enabled === "false") {
+			return new Response("Service disabled", { status: 503 });
+		}
+
 
 		try {
 			const { error } = await sendEmail(env, {
