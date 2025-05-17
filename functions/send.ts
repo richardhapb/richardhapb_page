@@ -46,13 +46,15 @@ export async function onRequestPost(context: { request: Request, env: Env }): Pr
 				return new Response("Blocked", { status: 403 });;
 			}
 		} catch {
-			return new Response("Bad request", { status: 404 });
+			return new Response("Bad request", { status: 400 });
 		}
 
 		const name = form.get("name")?.toString() || "";
 		const email = form.get("email")?.toString() || "";
 		const message = form.get("message")?.toString() || "";
 		const lang = form.get("lang")?.toString() || "en";
+
+		if (message.trim().length === 0) return new Response("Bad request", { status: 400 });
 
 		try {
 			const { error } = await sendEmail(env, {
