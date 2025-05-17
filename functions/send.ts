@@ -41,7 +41,7 @@ export async function onRequestPost(context: { request: Request, env: Env }): Pr
 		}
 
 		try {
-			const ts = Number(form.get("ts"));
+			const ts = Number(form.get("ts")?.toString() || Date.now().toString());
 			if (Date.now() - ts < 5000) {
 				return new Response("Blocked", { status: 403 });;
 			}
