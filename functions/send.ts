@@ -49,12 +49,14 @@ export async function onRequestPost(context: { request: Request, env: Env }): Pr
 			return new Response("Bad request", { status: 400 });
 		}
 
-		const name = form.get("name")?.toString() || "";
-		const email = form.get("email")?.toString() || "";
-		const message = form.get("message")?.toString() || "";
+		const name = (form.get("name")?.toString() || "").trim();
+		const email = (form.get("email")?.toString() || "").trim();
+		const message = (form.get("message")?.toString() || "").trim();
 		const lang = form.get("lang")?.toString() || "en";
 
-		if (message.trim().length === 0) return new Response("Bad request", { status: 400 });
+		if (message.length === 0 || name.length === 0 || email.length === 0) {
+			return new Response("Bad request", { status: 400 });
+		}
 
 		try {
 			const { error } = await sendEmail(env, {
