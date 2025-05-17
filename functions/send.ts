@@ -1,4 +1,5 @@
 import { Resend } from 'resend';
+import type { Env } from './types.ts'
 
 
 interface MessageObject {
@@ -6,13 +7,6 @@ interface MessageObject {
 	email: string
 	messageHtml: string
 	lang: string
-}
-interface Env {
-	MAIL_API_KEY: string;
-	PERSONAL_EMAIL: string;
-	ASSETS: {
-		fetch(request: Request): Promise<Response>;
-	};
 }
 
 async function sendEmail(env: Env, { name, email, messageHtml, lang }: MessageObject) {
@@ -30,8 +24,13 @@ async function sendEmail(env: Env, { name, email, messageHtml, lang }: MessageOb
 export async function onRequestPost(context: { request: Request, env: Env }): Promise<Response> {
 	const { request, env } = context
 
-
 	if (request.method === "POST" && new URL(request.url).pathname === "/send") {
+
+		const enabled = await env.MAIL_NS.get("enabled");
+		if (enabled === "false") {
+			return new Response("Service disabled", { status: 503 });
+		}
+
 		const form = await request.formData();
 
 		// 🛡️ Honeypot anti-bot

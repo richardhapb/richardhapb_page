@@ -6,5 +6,11 @@
 	"vars": {
 		"PERSONAL_EMAIL": "richard.hapb@icloud.com",
 		"MAIL_ENDPOINT": "http://localhost:8080"
-	}
+	},
+	"kv_namespaces": [
+		{
+			"binding": "MAIL_NS",
+			"id": "a352f46123964679a2a2ed3de8cda4c1"
+		}
+	]
 }
