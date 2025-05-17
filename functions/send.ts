@@ -33,17 +33,21 @@ export async function onRequestPost(context: { request: Request, env: Env }): Pr
 
 	if (request.method === "POST" && new URL(request.url).pathname === "/send") {
 		const form = await request.formData();
+
+		// 🛡️ Honeypot anti-bot
+		const botcheck = form.get("botcheck")?.toString() || "";
+		if (botcheck !== "") {
+			return new Response("Blocked", { status: 403 });
+		}
+
 		const name = form.get("name")?.toString() || "";
 		const email = form.get("email")?.toString() || "";
 		const message = form.get("message")?.toString() || "";
 		const lang = form.get("lang")?.toString() || "en"; try {
+
 			if (name == "RobertBef") {
 				return new Response("Blocked", { status: 403 })
 			}
-
-			return new Response("OK", { status: 200 })
-
-
 
 			const { error } = await sendEmail(env, {
 				name: name,
